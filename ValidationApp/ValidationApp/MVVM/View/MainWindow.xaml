@@ -239,7 +239,7 @@
                         Content="Создать новый контакт" 
                         Style="{StaticResource ButtonStyle}"
                         Margin="5 20 5 5"
-                        Command="{Binding CreateNewContactCommand}">
+                        Command="{Binding CommandValidateContact}">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="14" />

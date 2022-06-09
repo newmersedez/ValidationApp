@@ -10,3 +10,15 @@ D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationApp.MVVM.Co
 D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationApp.MVVM.Core\obj\Debug\net6.0-windows\refint\ValidationApp.MVVM.Core.dll
 D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationApp.MVVM.Core\obj\Debug\net6.0-windows\ValidationApp.MVVM.Core.pdb
 D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationApp.MVVM.Core\obj\Debug\net6.0-windows\ref\ValidationApp.MVVM.Core.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.MVVM.Core\bin\Debug\net6.0-windows\ValidationApp.MVVM.Core.deps.json
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.MVVM.Core\bin\Debug\net6.0-windows\ValidationApp.MVVM.Core.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.MVVM.Core\bin\Debug\net6.0-windows\ref\ValidationApp.MVVM.Core.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.MVVM.Core\bin\Debug\net6.0-windows\ValidationApp.MVVM.Core.pdb
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.MVVM.Core\obj\Debug\net6.0-windows\ValidationApp.MVVM.Core.csproj.AssemblyReference.cache
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.MVVM.Core\obj\Debug\net6.0-windows\ValidationApp.MVVM.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.MVVM.Core\obj\Debug\net6.0-windows\ValidationApp.MVVM.Core.AssemblyInfoInputs.cache
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.MVVM.Core\obj\Debug\net6.0-windows\ValidationApp.MVVM.Core.AssemblyInfo.cs
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.MVVM.Core\obj\Debug\net6.0-windows\ValidationApp.MVVM.Core.csproj.CoreCompileInputs.cache
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.MVVM.Core\obj\Debug\net6.0-windows\ValidationApp.MVVM.Core.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.MVVM.Core\obj\Debug\net6.0-windows\ref\ValidationApp.MVVM.Core.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.MVVM.Core\obj\Debug\net6.0-windows\ValidationApp.MVVM.Core.pdb

@@ -1,14 +1,20 @@
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
 using MVVM.Core.Command;
 using MVVM.Core.ViewModel;
-using ValidationApp.MVVM.Model;
+using Proto;
+using ValidationApp.Client;
+using ValidationApp.Context;
 
 namespace ValidationApp.MVVM.ViewModel;
 
 public sealed class MainWindowViewModel : ViewModelBase
 {
+    private ValidationClient _validation_client;
+    private ValidationReply _validation_reply;
+    private Contact _contact_to_validate=new Contact(); 
     public ObservableCollection<Contact> Contacts { get; }
     public string Lastname { get; set; }
     public string Firstname { get; set; }
@@ -19,41 +25,41 @@ public sealed class MainWindowViewModel : ViewModelBase
     public string Email { get; set; }
     public string Address { get; set; }
 
-    public RelayCommand CreateNewContactCommand { get; }
+    private RelayCommandAsync _command_validate_contact;
+    public RelayCommandAsync CommandValidateContact
+    {
+        get {return _command_validate_contact??=new RelayCommandAsync(validateContact_execute, validateContact_canExecute, (ex) => {return;});}
+    }
 
     public MainWindowViewModel()
     {
         Contacts = new ObservableCollection<Contact>();
-        CreateNewContactCommand = new RelayCommand(
-            _ => CreateNewContact(), _ => ValidateContactInfo());
+        _validation_client=new ValidationClient();
     }
 
-    private bool ValidateContactInfo()
+    private async Task validateContact_execute()
     {
-        // Тут по идее отправление данных на сервер для валидации и возврат true/false
-        // а пока большой if =)
-        if (!string.IsNullOrEmpty(Lastname) && !string.IsNullOrEmpty(Firstname) && !string.IsNullOrEmpty(Patronymic)
-            && !string.IsNullOrEmpty(PhoneNumber) && !string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(Address)
-            && !string.IsNullOrEmpty(PassportNumber) && !string.IsNullOrEmpty(BirthdayDate))
-            return true;
-        return false;
-    }
-
-    private void CreateNewContact()
-    {
-        // создание карточки нового контакта
-        var newContact = new Contact
-        {
-            Lastname = Lastname,
-            Firstname = Firstname,
-            Patronymic = Patronymic,
-            PassportNumber = PassportNumber,
-            BirthdayDate = BirthdayDate,
-            PhoneNumber = PhoneNumber,
-            Email = Email,
-            Address = Address
-        };
+        _contact_to_validate.Lastname=Lastname;
+        _contact_to_validate.Firstname=Firstname;
+        _contact_to_validate.Patronymic=Patronymic;
+        _contact_to_validate.PassportNumber=PassportNumber;
+        _contact_to_validate.BirthdayDate=BirthdayDate;
+        _contact_to_validate.PhoneNumber=PhoneNumber;
+        _contact_to_validate.Email=Email;
+        _contact_to_validate.Address=Address;
         
-        Application.Current.Dispatcher?.Invoke(()=> Contacts.Add(newContact));
+        _validation_reply=await _validation_client.validate(_contact_to_validate);
+        
+        if(_validation_reply.Result.Result)
+            Application.Current.Dispatcher?.Invoke(()=> Contacts.Add(_contact_to_validate));
+    }
+    private bool validateContact_canExecute(object parameter)
+    {
+        if(string.IsNullOrEmpty(Lastname) || string.IsNullOrEmpty(Firstname) || string.IsNullOrEmpty(Patronymic)
+           || string.IsNullOrEmpty(PhoneNumber) || string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Address)
+           || string.IsNullOrEmpty(PassportNumber) || string.IsNullOrEmpty(BirthdayDate))
+            return false;
+
+        return true;
     }
 }

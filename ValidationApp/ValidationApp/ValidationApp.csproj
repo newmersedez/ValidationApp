@@ -8,8 +8,14 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\ValidationApp.Client\ValidationApp.Client.csproj" />
+      <ProjectReference Include="..\ValidationApp.Context\ValidationApp.Context.csproj" />
       <ProjectReference Include="..\ValidationApp.MVVM.Core\ValidationApp.MVVM.Core.csproj" />
       <ProjectReference Include="..\ValidationApp.Styles\ValidationApp.Styles.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="MVVM\Model" />
     </ItemGroup>
 
 </Project>

@@ -16,3 +16,21 @@ D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationApp.Styles\
 D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationApp.Styles\obj\Debug\net6.0-windows\InputFieldStyle.baml
 D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationApp.Styles\obj\Debug\net6.0-windows\ButtonStyle.baml
 D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationApp.Styles\obj\Debug\net6.0-windows\ContactCardStyle.baml
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Styles\bin\Debug\net6.0-windows\ValidationApp.Styles.deps.json
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Styles\bin\Debug\net6.0-windows\ValidationApp.Styles.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Styles\bin\Debug\net6.0-windows\ref\ValidationApp.Styles.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Styles\bin\Debug\net6.0-windows\ValidationApp.Styles.pdb
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Styles\obj\Debug\net6.0-windows\ValidationApp.Styles.csproj.AssemblyReference.cache
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Styles\obj\Debug\net6.0-windows\ButtonStyle.baml
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Styles\obj\Debug\net6.0-windows\ContactCardStyle.baml
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Styles\obj\Debug\net6.0-windows\InputFieldStyle.baml
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Styles\obj\Debug\net6.0-windows\ScrollbarStyle.baml
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Styles\obj\Debug\net6.0-windows\ValidationApp.Styles_MarkupCompile.cache
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Styles\obj\Debug\net6.0-windows\ValidationApp.Styles.g.resources
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Styles\obj\Debug\net6.0-windows\ValidationApp.Styles.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Styles\obj\Debug\net6.0-windows\ValidationApp.Styles.AssemblyInfoInputs.cache
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Styles\obj\Debug\net6.0-windows\ValidationApp.Styles.AssemblyInfo.cs
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Styles\obj\Debug\net6.0-windows\ValidationApp.Styles.csproj.CoreCompileInputs.cache
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Styles\obj\Debug\net6.0-windows\ValidationApp.Styles.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Styles\obj\Debug\net6.0-windows\ref\ValidationApp.Styles.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Styles\obj\Debug\net6.0-windows\ValidationApp.Styles.pdb

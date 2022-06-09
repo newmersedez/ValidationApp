@@ -1,134 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationApp\\ValidationApp.csproj": {}
+    "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp\\ValidationApp.csproj": {}
   },
   "projects": {
-    "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationApp.MVVM.Core\\ValidationApp.MVVM.Core.csproj": {
+    "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Client\\ValidationApp.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationApp.MVVM.Core\\ValidationApp.MVVM.Core.csproj",
-        "projectName": "ValidationApp.MVVM.Core",
-        "projectPath": "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationApp.MVVM.Core\\ValidationApp.MVVM.Core.csproj",
-        "packagesPath": "C:\\Users\\newmersedez\\.nuget\\packages\\",
-        "outputPath": "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationApp.MVVM.Core\\obj\\",
+        "projectUniqueName": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Client\\ValidationApp.Client.csproj",
+        "projectName": "ValidationApp.Client",
+        "projectPath": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Client\\ValidationApp.Client.csproj",
+        "packagesPath": "C:\\Users\\Root\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Client\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\newmersedez\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0-windows"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0-windows7.0": {
-            "targetAlias": "net6.0-windows",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0-windows7.0": {
-          "targetAlias": "net6.0-windows",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            },
-            "Microsoft.WindowsDesktop.App.WPF": {
-              "privateAssets": "none"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationApp.Styles\\ValidationApp.Styles.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationApp.Styles\\ValidationApp.Styles.csproj",
-        "projectName": "ValidationApp.Styles",
-        "projectPath": "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationApp.Styles\\ValidationApp.Styles.csproj",
-        "packagesPath": "C:\\Users\\newmersedez\\.nuget\\packages\\",
-        "outputPath": "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationApp.Styles\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\newmersedez\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0-windows"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0-windows7.0": {
-            "targetAlias": "net6.0-windows",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0-windows7.0": {
-          "targetAlias": "net6.0-windows",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            },
-            "Microsoft.WindowsDesktop.App.WPF": {
-              "privateAssets": "none"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationApp\\ValidationApp.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationApp\\ValidationApp.csproj",
-        "projectName": "ValidationApp",
-        "projectPath": "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationApp\\ValidationApp.csproj",
-        "packagesPath": "C:\\Users\\newmersedez\\.nuget\\packages\\",
-        "outputPath": "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationApp\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\newmersedez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Root\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -142,11 +32,342 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationApp.MVVM.Core\\ValidationApp.MVVM.Core.csproj": {
-                "projectPath": "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationApp.MVVM.Core\\ValidationApp.MVVM.Core.csproj"
+              "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Context\\ValidationApp.Context.csproj": {
+                "projectPath": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Context\\ValidationApp.Context.csproj"
               },
-              "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationApp.Styles\\ValidationApp.Styles.csproj": {
-                "projectPath": "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationApp.Styles\\ValidationApp.Styles.csproj"
+              "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Proto\\ValidationApp.Proto.csproj": {
+                "projectPath": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Proto\\ValidationApp.Proto.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Grpc.Core": {
+              "target": "Package",
+              "version": "[2.46.3, )"
+            },
+            "Grpc.Net.Client": {
+              "target": "Package",
+              "version": "[2.46.0, )"
+            },
+            "Grpc.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.46.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Context\\ValidationApp.Context.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Context\\ValidationApp.Context.csproj",
+        "projectName": "ValidationApp.Context",
+        "projectPath": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Context\\ValidationApp.Context.csproj",
+        "packagesPath": "C:\\Users\\Root\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Context\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Root\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.MVVM.Core\\ValidationApp.MVVM.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.MVVM.Core\\ValidationApp.MVVM.Core.csproj",
+        "projectName": "ValidationApp.MVVM.Core",
+        "projectPath": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.MVVM.Core\\ValidationApp.MVVM.Core.csproj",
+        "packagesPath": "C:\\Users\\Root\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.MVVM.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Root\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Proto\\ValidationApp.Proto.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Proto\\ValidationApp.Proto.csproj",
+        "projectName": "ValidationApp.Proto",
+        "projectPath": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Proto\\ValidationApp.Proto.csproj",
+        "packagesPath": "C:\\Users\\Root\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Proto\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Root\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.21.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Styles\\ValidationApp.Styles.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Styles\\ValidationApp.Styles.csproj",
+        "projectName": "ValidationApp.Styles",
+        "projectPath": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Styles\\ValidationApp.Styles.csproj",
+        "packagesPath": "C:\\Users\\Root\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Styles\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Root\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp\\ValidationApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp\\ValidationApp.csproj",
+        "projectName": "ValidationApp",
+        "projectPath": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp\\ValidationApp.csproj",
+        "packagesPath": "C:\\Users\\Root\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Root\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {
+              "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Client\\ValidationApp.Client.csproj": {
+                "projectPath": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Client\\ValidationApp.Client.csproj"
+              },
+              "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Context\\ValidationApp.Context.csproj": {
+                "projectPath": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Context\\ValidationApp.Context.csproj"
+              },
+              "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.MVVM.Core\\ValidationApp.MVVM.Core.csproj": {
+                "projectPath": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.MVVM.Core\\ValidationApp.MVVM.Core.csproj"
+              },
+              "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Styles\\ValidationApp.Styles.csproj": {
+                "projectPath": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Styles\\ValidationApp.Styles.csproj"
               }
             }
           }
@@ -178,7 +399,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
