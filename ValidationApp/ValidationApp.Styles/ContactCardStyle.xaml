@@ -1,0 +1,55 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="ListViewItem" x:Key="ContactCardStyle">
+        <Setter Property="Background" Value="#292B2F" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListViewItem">
+                    <Border Background="{TemplateBinding Background}"
+                            Height="230"
+                            CornerRadius="15"
+                            Margin="8 2 8 2 "
+                            Padding="10 10 10 10">
+                           <StackPanel Orientation="Vertical">
+                               <Label Content="{Binding Lastname}"
+                                      Foreground="LightGray"
+                                      FontWeight="SemiBold"
+                                      FontSize="14"
+                                      Padding="5 0 5 0 "/>
+                               <Label Content="{Binding Firstname}"
+                                      Foreground="LightGray"
+                                      FontWeight="SemiBold"
+                                      FontSize="14"
+                                      Padding="5 0 5 0"/>
+                               <Label Content="{Binding Patronymic}"
+                                      Foreground="LightGray"
+                                      FontWeight="SemiBold"
+                                      FontSize="14"
+                                      Padding="5 0 5 0"/>
+                               <Label Content="{Binding PassportNumber}"
+                                      Foreground="LightGray"
+                                      FontWeight="SemiBold"
+                                      FontSize="12"/>
+                               <Label Content="{Binding BirthdayDate}"
+                                      Foreground="LightGray"
+                                      FontWeight="SemiBold"
+                                      FontSize="12"/>
+                               <Label Content="{Binding PhoneNumber}"
+                                      Foreground="LightGray"
+                                      FontWeight="SemiBold"
+                                      FontSize="12"/>
+                               <Label Content="{Binding Address}"
+                                      Foreground="LightGray"
+                                      FontWeight="SemiBold"
+                                      FontSize="12"/>
+                               <Label Content="{Binding Email}"
+                                      Foreground="LightGray"
+                                      FontWeight="SemiBold"
+                                      FontSize="12"/>
+                           </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

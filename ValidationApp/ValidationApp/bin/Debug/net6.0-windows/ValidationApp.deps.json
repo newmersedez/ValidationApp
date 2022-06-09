@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ValidationApp/1.0.0": {
+        "dependencies": {
+          "ValidationApp.MVVM.Core": "1.0.0",
+          "ValidationApp.Styles": "1.0.0"
+        },
+        "runtime": {
+          "ValidationApp.dll": {}
+        }
+      },
+      "ValidationApp.MVVM.Core/1.0.0": {
+        "runtime": {
+          "ValidationApp.MVVM.Core.dll": {}
+        }
+      },
+      "ValidationApp.Styles/1.0.0": {
+        "runtime": {
+          "ValidationApp.Styles.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ValidationApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ValidationApp.MVVM.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ValidationApp.Styles/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
