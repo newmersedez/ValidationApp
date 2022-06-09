@@ -6,9 +6,9 @@
             <Setter.Value>
                 <ControlTemplate TargetType="ListViewItem">
                     <Border Background="{TemplateBinding Background}"
-                            Height="230"
+                            Height="205"
                             CornerRadius="15"
-                            Margin="8 2 8 2 "
+                            Margin="10 10 10 10"
                             Padding="10 10 10 10">
                            <StackPanel Orientation="Vertical">
                                <Label Content="{Binding Lastname}"

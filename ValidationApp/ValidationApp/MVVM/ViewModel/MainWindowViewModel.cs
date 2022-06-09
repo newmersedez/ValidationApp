@@ -23,15 +23,6 @@ public sealed class MainWindowViewModel : ViewModelBase
 
     public MainWindowViewModel()
     {
-        Lastname = "Тришин";
-        Firstname = "Дмитрий";
-        Patronymic = "Александрович";
-        PassportNumber = "2220 232743";
-        BirthdayDate = "19.01.2001";
-        PhoneNumber = "+79290481474";
-        Email = "trishkk2001@gmail.com";
-        Address = "Lalka";
-
         Contacts = new ObservableCollection<Contact>();
         CreateNewContactCommand = new RelayCommand(
             _ => CreateNewContact(), _ => ValidateContactInfo());
