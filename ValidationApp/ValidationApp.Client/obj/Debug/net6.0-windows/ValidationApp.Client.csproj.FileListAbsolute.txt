@@ -1,0 +1,17 @@
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Client\bin\Debug\net6.0-windows\ValidationApp.Client.deps.json
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Client\bin\Debug\net6.0-windows\ValidationApp.Client.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Client\bin\Debug\net6.0-windows\ref\ValidationApp.Client.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Client\bin\Debug\net6.0-windows\ValidationApp.Client.pdb
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Client\bin\Debug\net6.0-windows\ValidationApp.Context.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Client\bin\Debug\net6.0-windows\ValidationApp.Proto.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Client\bin\Debug\net6.0-windows\ValidationApp.Context.pdb
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Client\bin\Debug\net6.0-windows\ValidationApp.Proto.pdb
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Client\obj\Debug\net6.0-windows\ValidationApp.Client.csproj.AssemblyReference.cache
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Client\obj\Debug\net6.0-windows\ValidationApp.Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Client\obj\Debug\net6.0-windows\ValidationApp.Client.AssemblyInfoInputs.cache
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Client\obj\Debug\net6.0-windows\ValidationApp.Client.AssemblyInfo.cs
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Client\obj\Debug\net6.0-windows\ValidationApp.Client.csproj.CoreCompileInputs.cache
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Client\obj\Debug\net6.0-windows\ValidationApp.Client.csproj.CopyComplete
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Client\obj\Debug\net6.0-windows\ValidationApp.Client.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Client\obj\Debug\net6.0-windows\ref\ValidationApp.Client.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Client\obj\Debug\net6.0-windows\ValidationApp.Client.pdb

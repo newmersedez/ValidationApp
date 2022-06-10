@@ -105,6 +105,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Google.Protobuf": "3.21.1",
           "Grpc.Core": "2.46.3",
           "Grpc.Net.Client": "2.46.0",
           "ValidationApp.Context": "1.0.0",

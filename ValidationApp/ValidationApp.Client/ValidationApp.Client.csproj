@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Google.Protobuf" Version="3.21.1" />
+      <PackageReference Include="Grpc.Core" Version="2.46.3" />
+      <PackageReference Include="Grpc.Net.Client" Version="2.46.0" />
+      <PackageReference Include="Grpc.Tools" Version="2.46.3">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Protobuf Include="..\ValidationApp.Proto\Protos\common.proto" GrpcServices="Client" ProtoRoot="..\ValidationApp.Proto\Protos\">
+            <Link>Protos\common.proto</Link>
+        </Protobuf>
+        <Protobuf Include="..\ValidationApp.Proto\Protos\data.proto" GrpcServices="Client" ProtoRoot="..\ValidationApp.Proto\Protos\">
+            <Link>Protos\data.proto</Link>
+        </Protobuf>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ValidationApp.Context\ValidationApp.Context.csproj" />
+      <ProjectReference Include="..\ValidationApp.Proto\ValidationApp.Proto.csproj" />
+    </ItemGroup>
+    
+</Project>

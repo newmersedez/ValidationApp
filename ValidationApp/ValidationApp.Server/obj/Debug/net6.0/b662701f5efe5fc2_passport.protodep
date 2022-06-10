@@ -1,0 +1,2 @@
+obj\Debug\net6.0/Passport.cs \
+obj\Debug\net6.0/PassportGrpc.cs: ../ValidationServers.Passport/Protos/passport.proto

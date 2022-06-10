@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "kL8xWmgW0YN6How3ZFnQO875R9B9X4Gf0VQbSxJFh0It6MUCjh1NZ1J/M0gs2OuqU8PZ+45KH7OHSSlpi1DXQg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Proto\\ValidationApp.Proto.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Root\\.nuget\\packages\\google.protobuf\\3.21.1\\google.protobuf.3.21.1.nupkg.sha512"
+  ],
+  "logs": []
+}

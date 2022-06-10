@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "c7jaZWif701GF340KcpxM0Lrc+eqrTRYxAq6UJwIpk8=",
+  "Source": "ValidationServers.Fullname",
+  "BasePath": "_content/ValidationServers.Fullname",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

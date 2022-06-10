@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "ValidationServers.Email";
+
+package email;
+
+message ResultReply {
+  bool result=1;
+  string info=2;
+}
+
+message ValidationEmailRequest {
+  string name = 1;
+}
+message ValidationEmailReply {
+  string message = 1;
+}
+
+service ValidationEmail {
+  rpc ValidateEmail(ValidationEmailRequest) returns(ValidationEmailReply);
+}

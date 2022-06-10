@@ -1,0 +1,2 @@
+obj\Debug\net6.0/Date.cs \
+obj\Debug\net6.0/DateGrpc.cs: ../ValidationServers.Date/Protos/date.proto

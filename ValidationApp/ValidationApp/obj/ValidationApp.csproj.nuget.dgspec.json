@@ -51,6 +51,10 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.21.1, )"
+            },
             "Grpc.Core": {
               "target": "Package",
               "version": "[2.46.3, )"

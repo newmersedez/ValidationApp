@@ -1,0 +1,2 @@
+obj\Debug\net6.0\Protos/Date.cs \
+obj\Debug\net6.0\Protos/DateGrpc.cs: Protos/date.proto

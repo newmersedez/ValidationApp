@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "w5nuog5j7tgJ1BYYf6UOAqXgj1syTD1lT8yaK3wKFuQ=",
+  "Source": "ValidationServers.Phone",
+  "BasePath": "_content/ValidationServers.Phone",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ENDRQYvXB/CVCmH6xWT/EcjptdXDwKxlJAHv1ado0nM=",
+  "Source": "ValidationServers.Email",
+  "BasePath": "_content/ValidationServers.Email",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,2 @@
+obj\Debug\net6.0\Protos/Fullname.cs \
+obj\Debug\net6.0\Protos/FullnameGrpc.cs: Protos/fullname.proto

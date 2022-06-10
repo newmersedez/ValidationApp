@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Google.Protobuf" Version="3.21.1" />
+      <PackageReference Include="Grpc.AspNetCore" Version="2.46.0" />
+      <PackageReference Include="Grpc.Core" Version="2.46.3" />
+      <PackageReference Include="Grpc.Tools" Version="2.46.3">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Protobuf Include="..\ValidationApp.Proto\Protos\common.proto" GrpcServices="Server" ProtoRoot="..\ValidationApp.Proto\Protos\">
+            <Link>Protos\common.proto</Link>
+        </Protobuf>
+        <Protobuf Include="..\ValidationApp.Proto\Protos\data.proto" GrpcServices="Server" ProtoRoot="..\ValidationApp.Proto\Protos\">
+            <Link>Protos\data.proto</Link>
+        </Protobuf>
+        <Protobuf Include="..\ValidationServers.Address\Protos\address.proto" GrpcServices="Client">
+            <Link>Protos\address.proto</Link>
+        </Protobuf>
+        <Protobuf Include="..\ValidationServers.Date\Protos\date.proto" GrpcServices="Client">
+            <Link>Protos\date.proto</Link>
+        </Protobuf>
+        <Protobuf Include="..\ValidationServers.Email\Protos\email.proto" GrpcServices="Client">
+            <Link>Protos\email.proto</Link>
+        </Protobuf>
+        <Protobuf Include="..\ValidationServers.Fullname\Protos\fullname.proto" GrpcServices="Client">
+            <Link>Protos\fullname.proto</Link>
+        </Protobuf>
+        <Protobuf Include="..\ValidationServers.Passport\Protos\passport.proto" GrpcServices="Client">
+            <Link>Protos\passport.proto</Link>
+        </Protobuf>
+        <Protobuf Include="..\ValidationServers.Phone\Protos\phone.proto" GrpcServices="Client">
+            <Link>Protos\phone.proto</Link>
+        </Protobuf>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ValidationServers.Address\ValidationServers.Address.csproj" />
+      <ProjectReference Include="..\ValidationServers.Date\ValidationServers.Date.csproj" />
+      <ProjectReference Include="..\ValidationServers.Email\ValidationServers.Email.csproj" />
+      <ProjectReference Include="..\ValidationServers.Fullname\ValidationServers.Fullname.csproj" />
+      <ProjectReference Include="..\ValidationServers.Passport\ValidationServers.Passport.csproj" />
+      <ProjectReference Include="..\ValidationServers.Phone\ValidationServers.Phone.csproj" />
+    </ItemGroup>
+    
+</Project>

@@ -1,0 +1,2 @@
+obj\Debug\net6.0/Email.cs \
+obj\Debug\net6.0/EmailGrpc.cs: ../ValidationServers.Email/Protos/email.proto

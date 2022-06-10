@@ -1,0 +1,3 @@
+obj\Debug\net6.0-windows/Data.cs \
+obj\Debug\net6.0-windows/DataGrpc.cs: ../ValidationApp.Proto/Protos/common.proto\
+ ../ValidationApp.Proto/Protos/data.proto

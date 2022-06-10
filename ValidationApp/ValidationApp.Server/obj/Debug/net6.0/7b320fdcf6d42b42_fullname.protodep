@@ -1,0 +1,2 @@
+obj\Debug\net6.0/Fullname.cs \
+obj\Debug\net6.0/FullnameGrpc.cs: ../ValidationServers.Fullname/Protos/fullname.proto

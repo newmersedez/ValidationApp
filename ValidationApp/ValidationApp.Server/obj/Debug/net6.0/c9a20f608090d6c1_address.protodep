@@ -1,0 +1,2 @@
+obj\Debug\net6.0/Address.cs \
+obj\Debug\net6.0/AddressGrpc.cs: ../ValidationServers.Address/Protos/address.proto

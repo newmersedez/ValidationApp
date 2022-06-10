@@ -1,0 +1,4 @@
+obj\Debug\net6.0/Data.cs \
+obj\Debug\net6.0/DataGrpc.cs: C:/Users/Root/.nuget/packages/grpc.tools/2.46.3/build/native/include/google/protobuf/timestamp.proto\
+ ../ValidationApp.Proto/Protos/common.proto\
+ ../ValidationApp.Proto/Protos/data.proto

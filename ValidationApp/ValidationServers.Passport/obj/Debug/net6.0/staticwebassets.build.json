@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "m+mdu/Vra4cKfU88chyZp7gtYSPjEHTFFBuvTzggZXM=",
+  "Source": "ValidationServers.Passport",
+  "BasePath": "_content/ValidationServers.Passport",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

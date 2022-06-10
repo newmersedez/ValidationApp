@@ -1,0 +1,12 @@
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Proto\bin\Debug\net6.0\ValidationApp.Proto.deps.json
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Proto\bin\Debug\net6.0\ValidationApp.Proto.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Proto\bin\Debug\net6.0\ref\ValidationApp.Proto.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Proto\bin\Debug\net6.0\ValidationApp.Proto.pdb
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Proto\obj\Debug\net6.0\ValidationApp.Proto.csproj.AssemblyReference.cache
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Proto\obj\Debug\net6.0\ValidationApp.Proto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Proto\obj\Debug\net6.0\ValidationApp.Proto.AssemblyInfoInputs.cache
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Proto\obj\Debug\net6.0\ValidationApp.Proto.AssemblyInfo.cs
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Proto\obj\Debug\net6.0\ValidationApp.Proto.csproj.CoreCompileInputs.cache
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Proto\obj\Debug\net6.0\ValidationApp.Proto.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Proto\obj\Debug\net6.0\ref\ValidationApp.Proto.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Proto\obj\Debug\net6.0\ValidationApp.Proto.pdb

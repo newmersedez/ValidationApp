@@ -1,0 +1,28 @@
+syntax="proto3";
+option csharp_namespace="Proto";
+
+import "common.proto";
+
+package data;
+
+message ValidationResult{
+  bytes guid=1;
+  string record=2;
+}
+
+message ValidationRequest{
+  repeated string full_name=1;
+  string phone_number=2;
+  string email=3;
+  string address=4;
+  string passport_number=5;
+  string birth_date=6;
+}
+message ValidationReply{        //TODO one reply per record?
+  common.ResultReply result=1;
+  repeated ValidationResult validation_result=2;
+}
+
+service Validation {
+  rpc validate(ValidationRequest) returns(ValidationReply);
+}
