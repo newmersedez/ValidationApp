@@ -107,6 +107,7 @@
                        Margin="5 0 0 0"/>
                 <TextBox 
                     Width="430"
+                    Height="30"
                     Style="{StaticResource InputFieldStyle}"
                     Text="{Binding Lastname, UpdateSourceTrigger=PropertyChanged}">
                     <TextBox.Resources>
@@ -124,6 +125,7 @@
                        Margin="5 0 0 0"/>
                 <TextBox 
                     Width="430"
+                    Height="30"
                     Style="{StaticResource InputFieldStyle}"
                     Text="{Binding Firstname, UpdateSourceTrigger=PropertyChanged}">
                     <TextBox.Resources>
@@ -141,6 +143,7 @@
                        Margin="5 0 0 0"/>
                 <TextBox 
                     Width="430"
+                    Height="30"
                     Style="{StaticResource InputFieldStyle}"
                     Text="{Binding Patronymic, UpdateSourceTrigger=PropertyChanged}">
                     <TextBox.Resources>
@@ -158,6 +161,7 @@
                        Margin="5 0 0 0"/>
                 <TextBox 
                     Width="430"
+                    Height="30"
                     Style="{StaticResource InputFieldStyle}"
                     Text="{Binding PassportNumber, UpdateSourceTrigger=PropertyChanged}">
                     <TextBox.Resources>
@@ -175,6 +179,7 @@
                        Margin="5 0 0 0"/>
                 <TextBox 
                     Width="430"
+                    Height="30"
                     Style="{StaticResource InputFieldStyle}"
                     Text="{Binding BirthdayDate, UpdateSourceTrigger=PropertyChanged}">
                     <TextBox.Resources>
@@ -192,6 +197,9 @@
                        Margin="5 0 0 0"/>
                 <TextBox 
                     Width="430"
+                    MinHeight="30"
+                    TextWrapping="Wrap"
+                    AcceptsReturn="True"
                     Style="{StaticResource InputFieldStyle}"
                     Text="{Binding PhoneNumber, UpdateSourceTrigger=PropertyChanged}">
                     <TextBox.Resources>
@@ -209,6 +217,9 @@
                        Margin="5 0 0 0"/>
                 <TextBox 
                     Width="430"
+                    MinHeight="30"
+                    TextWrapping="Wrap"
+                    AcceptsReturn="True"
                     Style="{StaticResource InputFieldStyle}"
                     Text="{Binding Address, UpdateSourceTrigger=PropertyChanged}">
                     <TextBox.Resources>
@@ -226,6 +237,9 @@
                        Margin="5 0 0 0"/>
                 <TextBox 
                     Width="430"
+                    MinHeight="30"
+                    TextWrapping="Wrap"
+                    AcceptsReturn="True"
                     Style="{StaticResource InputFieldStyle}"
                     Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}">
                     <TextBox.Resources>
