@@ -9,13 +9,31 @@ message ResultReply {
   string info=2;
 }
 
+message AuthenticationRequest {
+  
+}
+message AuthenticationReply {
+  ResultReply result = 1;
+  uint64 id=2;
+}
+
 message ValidationFullnameRequest {
-  string name = 1;
+  uint64 id=2;
+  string data = 1;
 }
 message ValidationFullnameReply {
-  string message = 1;
+  ResultReply result = 1;
+}
+
+message DataRequest {
+  uint64 id=1;
+}
+message DataReply {
+  ResultReply result = 1;
 }
 
 service ValidationFullname {
+  rpc Authenticate(AuthenticationRequest) returns(AuthenticationReply);
   rpc ValidateFullname(ValidationFullnameRequest) returns(ValidationFullnameReply);
+  rpc GetServerData(DataRequest) returns(DataReply);
 }

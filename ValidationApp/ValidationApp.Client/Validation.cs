@@ -1,4 +1,5 @@
 ﻿using Grpc.Core;
+using Grpc.Net.Client;
 using Proto;
 using ValidationApp.Context;
 
@@ -25,7 +26,6 @@ public sealed class ValidationClient
         _validation_request.Address=contact.Address;
         _validation_request.PassportNumber=contact.PassportNumber;
         _validation_request.BirthDate=contact.BirthdayDate;
-
         return await _client_validation.validateAsync(_validation_request);
     }
 }

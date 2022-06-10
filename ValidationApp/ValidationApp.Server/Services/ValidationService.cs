@@ -7,13 +7,14 @@ using ValidationServers.Phone;
 using ValidationServers.Email;
 using ValidationServers.Passport;
 using ValidationServers.Date;
-using ResultReply=ValidationServers.Email.ResultReply;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace ValidationApp.Server.Services;
 
 public class ValidationService : Validation.ValidationBase
 {
-    private readonly Channel _channel=new Channel("localhost", 5001, ChannelCredentials.Insecure);
+    private readonly Channel _channel=new Channel("localhost", 5002, ChannelCredentials.Insecure);
     private readonly ValidationFullname.ValidationFullnameClient _client_validation_fullname;
     private readonly ValidationPhone.ValidationPhoneClient _client_validation_phone;
     private readonly ValidationEmail.ValidationEmailClient _client_validation_email;
@@ -21,18 +22,40 @@ public class ValidationService : Validation.ValidationBase
     private readonly ValidationPassport.ValidationPassportClient _client_validation_passport;
     private readonly ValidationDate.ValidationDateClient _client_validation_date;
 
-    private List<ValidationFullnameReply> _replies_validation_fullname=new List<ValidationFullnameReply>();
+    private List<ValidationFullnameReply> _replies_validation_fullname=new List<ValidationFullnameReply>();     // TODO вместо этих реплаев сделать DataReply
     private List<ValidationPhoneReply> _replies_validation_phone=new List<ValidationPhoneReply>();
     private List<ValidationEmailReply> _replies_validation_email=new List<ValidationEmailReply>();
     private List<ValidationAddressReply> _replies_validation_address=new List<ValidationAddressReply>();
     private List<ValidationPassportReply> _replies_validation_passport=new List<ValidationPassportReply>();
     private List<ValidationDateReply> _replies_validation_date=new List<ValidationDateReply>();
+
+    private DataReply _data_reply;
+    private DataRequest _data_request=new DataRequest();
+
+    private ulong _id;
     
     public ValidationService()
     {
-        
+        _client_validation_fullname=new ValidationFullname.ValidationFullnameClient(_channel);
     }
 
+    private async Task getDataFromServer(int delay=500)
+    {
+        while(true)
+        {
+            _data_reply=await _client_validation_fullname.GetServerDataAsync(_data_request);
+             if(_data_reply.Result.Result==false)
+                 continue;
+             else
+             {
+                 break;
+             }
+             
+            await Task.Delay(delay);
+        }
+            
+    }
+    
     private string[] splitRecord(string record, char delimiter, char removed)
     {
         string[] subs=record.Split(',');
@@ -48,7 +71,8 @@ public class ValidationService : Validation.ValidationBase
         string[] components=splitRecord(record, ',', ' ');
         int component_count=components.Length;
 
-        components_list.Add((new Guid(record), record));
+        MD5 md5=MD5.Create();
+        components_list.Add((new Guid(md5.ComputeHash(Encoding.UTF8.GetBytes(record))), record));
         if(component_count<component_count_min || component_count>component_count_max)
             return (component_count, false, components);
         return (component_count, true, components);
@@ -62,8 +86,16 @@ public class ValidationService : Validation.ValidationBase
         ValidationReply validation_reply=new ValidationReply();
         /*ResultReply result_reply=new ResultReply() 
                                 {Info=""};*/
-        ResultReply result_reply=new ResultReply();
+        Proto.ResultReply result_reply=new Proto.ResultReply();
 
+        var authentication_reply = await _client_validation_fullname.AuthenticateAsync(new AuthenticationRequest());
+        if(!authentication_reply.Result.Result)
+        {
+            // TODO unable to connect
+        }
+        _id=authentication_reply.Id;
+        _data_request.Id=_id;
+        
         string tmp="";
         foreach (var component in request.FullName)         // TODO fullname to one string
         {
@@ -71,17 +103,19 @@ public class ValidationService : Validation.ValidationBase
         }
         
         check_component_result=checkComponentCount(components, tmp, 1);    // TODO все что далее можно поробовать распихать по функциям, когда время будет (проблема, как итерировать по полям реквеста?)
-        if(!check_component_result.Item2)
+        if(check_component_result.Item2)
         {
             validation_reply.ValidationResult.Add(new ValidationResult()
                                                   { Guid=ByteString.CopyFrom(components[0].Item1.ToByteArray()),
                                                      Record = components[0].Item2});
-            foreach (var component in check_component_result.Item3) // TODO тут надо сделать сами парсеры (валидирующие методы на серверах) и записывать возвращаемый ими результат в общее поле Info
+            foreach (var component in check_component_result.Item3)
             {
                 // TODO с запуском таски возможен быдлокод
-                tasks.Add(new Task(async () => _replies_validation_fullname.Add(await _client_validation_fullname.ValidateFullnameAsync(new ValidationFullnameRequest()
-                                                                                                                                        { Name=tmp }))));
+                tasks.Add(Task.Run(async () => _replies_validation_fullname.Add(await _client_validation_fullname.ValidateFullnameAsync(new ValidationFullnameRequest()
+                                                                                                                                        { Data=tmp }))));
             }
+
+            Task.Run(() => getDataFromServer());
         }
         else
             result_reply.Result=false;
@@ -96,7 +130,7 @@ public class ValidationService : Validation.ValidationBase
             foreach (var component in check_component_result.Item3)
             {
                 tasks.Add(new Task(async () => _replies_validation_fullname.Add(await _client_validation_fullname.ValidateFullnameAsync(new ValidationFullnameRequest()
-                                                                                                                                        { Name=tmp }))));
+                                                                                                                                        { Data=tmp }))));
             }
         }
         else
@@ -111,7 +145,7 @@ public class ValidationService : Validation.ValidationBase
             foreach (var component in check_component_result.Item3)
             {
                 tasks.Add(new Task(async () => _replies_validation_fullname.Add(await _client_validation_fullname.ValidateFullnameAsync(new ValidationFullnameRequest()
-                                                                                                                                        { Name=tmp }))));
+                                                                                                                                        { Data=tmp }))));
             }
         }
         else
@@ -126,7 +160,7 @@ public class ValidationService : Validation.ValidationBase
             foreach (var component in check_component_result.Item3)
             {
                 tasks.Add(new Task(async () => _replies_validation_fullname.Add(await _client_validation_fullname.ValidateFullnameAsync(new ValidationFullnameRequest()
-                                                                                                                                        { Name=tmp }))));
+                                                                                                                                        { Data= tmp }))));
             }
         }
         else
@@ -141,7 +175,7 @@ public class ValidationService : Validation.ValidationBase
             foreach (var component in check_component_result.Item3)
             {
                 tasks.Add(new Task(async () => _replies_validation_fullname.Add(await _client_validation_fullname.ValidateFullnameAsync(new ValidationFullnameRequest()
-                                                                                                                                        { Name=tmp }))));
+                                                                                                                                        { Data=tmp }))));
             }
         }
         else
@@ -156,7 +190,7 @@ public class ValidationService : Validation.ValidationBase
             foreach (var component in check_component_result.Item3)
             {
                 tasks.Add(new Task(async () => _replies_validation_fullname.Add(await _client_validation_fullname.ValidateFullnameAsync(new ValidationFullnameRequest()
-                                                                                                                                        { Name=tmp }))));
+                                                                                                                                        { Data=tmp }))));
             }
         }
         else
@@ -166,7 +200,7 @@ public class ValidationService : Validation.ValidationBase
         
         foreach (var reply in _replies_validation_fullname)
         {
-            result_reply.Info+=$"{nameof(request.FullName)} component count is {reply.Message}";       // TODO add results to info string
+            result_reply.Info+=$"{nameof(request.FullName)} component count is {reply.Result}";       // TODO add results to info string
         }
         foreach (var reply in _replies_validation_email)
         {

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IQQZOcrXbNQ38kUsPilSGSfOcaB1GZHlmxSi80AeBJg+BS53WYWA3rR1HmUk7oVGStLz6U4hVkYJqcu37sYZog==",
+  "dgSpecHash": "fE3onnLg7b3MUQ/KvRrznp/4hTWoBFcbE3uHow0g35vdBi0pTGSM0Yy+2pU68j/iZSZi934rEWiAitrF9Bv52A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationApp.Server\\ValidationApp.Server.csproj",
   "expectedPackageFiles": [
@@ -24,7 +24,9 @@
     "C:\\Users\\Root\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.0.3\\microsoft.extensions.logging.abstractions.3.0.3.nupkg.sha512",
     "C:\\Users\\Root\\.nuget\\packages\\microsoft.extensions.options\\3.0.3\\microsoft.extensions.options.3.0.3.nupkg.sha512",
     "C:\\Users\\Root\\.nuget\\packages\\microsoft.extensions.primitives\\3.0.3\\microsoft.extensions.primitives.3.0.3.nupkg.sha512",
-    "C:\\Users\\Root\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+    "C:\\Users\\Root\\.nuget\\packages\\rabbitmq.client\\6.3.1\\rabbitmq.client.6.3.1.nupkg.sha512",
+    "C:\\Users\\Root\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Root\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512"
   ],
   "logs": []
 }

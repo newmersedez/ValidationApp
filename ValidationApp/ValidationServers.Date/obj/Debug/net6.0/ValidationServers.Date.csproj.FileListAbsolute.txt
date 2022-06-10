@@ -27,3 +27,4 @@ C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationS
 C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationServers.Date\obj\Debug\net6.0\ref\ValidationServers.Date.dll
 C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationServers.Date\obj\Debug\net6.0\ValidationServers.Date.pdb
 C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationServers.Date\obj\Debug\net6.0\ValidationServers.Date.genruntimeconfig.cache
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationServers.Date\bin\Debug\net6.0\RabbitMQ.Client.dll

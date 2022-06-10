@@ -27,3 +27,4 @@ C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationS
 C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationServers.Email\obj\Debug\net6.0\ref\ValidationServers.Email.dll
 C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationServers.Email\obj\Debug\net6.0\ValidationServers.Email.pdb
 C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationServers.Email\obj\Debug\net6.0\ValidationServers.Email.genruntimeconfig.cache
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationServers.Email\bin\Debug\net6.0\RabbitMQ.Client.dll

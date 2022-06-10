@@ -64,7 +64,7 @@
       "Grpc.Core/2.46.3": {
         "dependencies": {
           "Grpc.Core.Api": "2.46.3",
-          "System.Memory": "4.5.3"
+          "System.Memory": "4.5.4"
         },
         "runtime": {
           "lib/netstandard2.0/Grpc.Core.dll": {
@@ -102,7 +102,7 @@
       },
       "Grpc.Core.Api/2.46.3": {
         "dependencies": {
-          "System.Memory": "4.5.3"
+          "System.Memory": "4.5.4"
         },
         "runtime": {
           "lib/netstandard2.1/Grpc.Core.Api.dll": {
@@ -191,11 +191,25 @@
         }
       },
       "Microsoft.Extensions.Primitives/3.0.3": {},
-      "System.Memory/4.5.3": {},
+      "RabbitMQ.Client/6.3.1": {
+        "dependencies": {
+          "System.Memory": "4.5.4",
+          "System.Threading.Channels": "4.7.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.3.1.0"
+          }
+        }
+      },
+      "System.Memory/4.5.4": {},
+      "System.Threading.Channels/4.7.1": {},
       "ValidationServers.Address/1.0.0": {
         "dependencies": {
           "Google.Protobuf": "3.21.1",
-          "Grpc.AspNetCore": "2.46.0"
+          "Grpc.AspNetCore": "2.46.0",
+          "RabbitMQ.Client": "6.3.1"
         },
         "runtime": {
           "ValidationServers.Address.dll": {}
@@ -203,7 +217,8 @@
       },
       "ValidationServers.Date/1.0.0": {
         "dependencies": {
-          "Grpc.AspNetCore": "2.46.0"
+          "Grpc.AspNetCore": "2.46.0",
+          "RabbitMQ.Client": "6.3.1"
         },
         "runtime": {
           "ValidationServers.Date.dll": {}
@@ -211,7 +226,8 @@
       },
       "ValidationServers.Email/1.0.0": {
         "dependencies": {
-          "Grpc.AspNetCore": "2.46.0"
+          "Grpc.AspNetCore": "2.46.0",
+          "RabbitMQ.Client": "6.3.1"
         },
         "runtime": {
           "ValidationServers.Email.dll": {}
@@ -219,7 +235,8 @@
       },
       "ValidationServers.Fullname/1.0.0": {
         "dependencies": {
-          "Grpc.AspNetCore": "2.46.0"
+          "Grpc.AspNetCore": "2.46.0",
+          "RabbitMQ.Client": "6.3.1"
         },
         "runtime": {
           "ValidationServers.Fullname.dll": {}
@@ -227,7 +244,8 @@
       },
       "ValidationServers.Passport/1.0.0": {
         "dependencies": {
-          "Grpc.AspNetCore": "2.46.0"
+          "Grpc.AspNetCore": "2.46.0",
+          "RabbitMQ.Client": "6.3.1"
         },
         "runtime": {
           "ValidationServers.Passport.dll": {}
@@ -235,7 +253,8 @@
       },
       "ValidationServers.Phone/1.0.0": {
         "dependencies": {
-          "Grpc.AspNetCore": "2.46.0"
+          "Grpc.AspNetCore": "2.46.0",
+          "RabbitMQ.Client": "6.3.1"
         },
         "runtime": {
           "ValidationServers.Phone.dll": {}
@@ -389,12 +408,26 @@
       "path": "microsoft.extensions.primitives/3.0.3",
       "hashPath": "microsoft.extensions.primitives.3.0.3.nupkg.sha512"
     },
-    "System.Memory/4.5.3": {
+    "RabbitMQ.Client/6.3.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
-      "path": "system.memory/4.5.3",
-      "hashPath": "system.memory.4.5.3.nupkg.sha512"
+      "sha512": "sha512-l70P6ySsVFS+QCwLldem92GCXYdwvg0X6c+Ty5Yv543eVYVcPtNUhNhmo8FsNVxQZuezMl3rfDJErIvqNJt1CA==",
+      "path": "rabbitmq.client/6.3.1",
+      "hashPath": "rabbitmq.client.6.3.1.nupkg.sha512"
+    },
+    "System.Memory/4.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+      "path": "system.memory/4.5.4",
+      "hashPath": "system.memory.4.5.4.nupkg.sha512"
+    },
+    "System.Threading.Channels/4.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6akRtHK/wab3246t4p5v3HQrtQk8LboOt5T4dtpNgsp3zvDeM4/Gx8V12t0h+c/W9/enUrilk8n6EQqdQorZAA==",
+      "path": "system.threading.channels/4.7.1",
+      "hashPath": "system.threading.channels.4.7.1.nupkg.sha512"
     },
     "ValidationServers.Address/1.0.0": {
       "type": "project",

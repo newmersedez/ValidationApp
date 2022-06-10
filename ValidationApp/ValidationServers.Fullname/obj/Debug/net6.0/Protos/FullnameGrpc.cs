@@ -46,9 +46,25 @@ namespace ValidationServers.Fullname {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Fullname.AuthenticationRequest> __Marshaller_fullname_AuthenticationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Fullname.AuthenticationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Fullname.AuthenticationReply> __Marshaller_fullname_AuthenticationReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Fullname.AuthenticationReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ValidationServers.Fullname.ValidationFullnameRequest> __Marshaller_fullname_ValidationFullnameRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Fullname.ValidationFullnameRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ValidationServers.Fullname.ValidationFullnameReply> __Marshaller_fullname_ValidationFullnameReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Fullname.ValidationFullnameReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Fullname.DataRequest> __Marshaller_fullname_DataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Fullname.DataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Fullname.DataReply> __Marshaller_fullname_DataReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Fullname.DataReply.Parser));
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ValidationServers.Fullname.AuthenticationRequest, global::ValidationServers.Fullname.AuthenticationReply> __Method_Authenticate = new grpc::Method<global::ValidationServers.Fullname.AuthenticationRequest, global::ValidationServers.Fullname.AuthenticationReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Authenticate",
+        __Marshaller_fullname_AuthenticationRequest,
+        __Marshaller_fullname_AuthenticationReply);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::ValidationServers.Fullname.ValidationFullnameRequest, global::ValidationServers.Fullname.ValidationFullnameReply> __Method_ValidateFullname = new grpc::Method<global::ValidationServers.Fullname.ValidationFullnameRequest, global::ValidationServers.Fullname.ValidationFullnameReply>(
@@ -57,6 +73,14 @@ namespace ValidationServers.Fullname {
         "ValidateFullname",
         __Marshaller_fullname_ValidationFullnameRequest,
         __Marshaller_fullname_ValidationFullnameReply);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ValidationServers.Fullname.DataRequest, global::ValidationServers.Fullname.DataReply> __Method_GetServerData = new grpc::Method<global::ValidationServers.Fullname.DataRequest, global::ValidationServers.Fullname.DataReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetServerData",
+        __Marshaller_fullname_DataRequest,
+        __Marshaller_fullname_DataReply);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -69,7 +93,19 @@ namespace ValidationServers.Fullname {
     public abstract partial class ValidationFullnameBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::ValidationServers.Fullname.AuthenticationReply> Authenticate(global::ValidationServers.Fullname.AuthenticationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::ValidationServers.Fullname.ValidationFullnameReply> ValidateFullname(global::ValidationServers.Fullname.ValidationFullnameRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::ValidationServers.Fullname.DataReply> GetServerData(global::ValidationServers.Fullname.DataRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -82,7 +118,9 @@ namespace ValidationServers.Fullname {
     public static grpc::ServerServiceDefinition BindService(ValidationFullnameBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_ValidateFullname, serviceImpl.ValidateFullname).Build();
+          .AddMethod(__Method_Authenticate, serviceImpl.Authenticate)
+          .AddMethod(__Method_ValidateFullname, serviceImpl.ValidateFullname)
+          .AddMethod(__Method_GetServerData, serviceImpl.GetServerData).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -92,7 +130,9 @@ namespace ValidationServers.Fullname {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ValidationFullnameBase serviceImpl)
     {
+      serviceBinder.AddMethod(__Method_Authenticate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ValidationServers.Fullname.AuthenticationRequest, global::ValidationServers.Fullname.AuthenticationReply>(serviceImpl.Authenticate));
       serviceBinder.AddMethod(__Method_ValidateFullname, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ValidationServers.Fullname.ValidationFullnameRequest, global::ValidationServers.Fullname.ValidationFullnameReply>(serviceImpl.ValidateFullname));
+      serviceBinder.AddMethod(__Method_GetServerData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ValidationServers.Fullname.DataRequest, global::ValidationServers.Fullname.DataReply>(serviceImpl.GetServerData));
     }
 
   }
