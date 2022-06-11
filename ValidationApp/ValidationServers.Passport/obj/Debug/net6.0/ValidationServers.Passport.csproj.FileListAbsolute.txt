@@ -30,3 +30,35 @@ C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationS
 C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\RabbitMQ.Client.dll
 C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\Container.dll
 C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\Container.pdb
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\appsettings.Development.json
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\appsettings.json
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\ValidationServers.Passport.exe
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\ValidationServers.Passport.deps.json
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\ValidationServers.Passport.runtimeconfig.json
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\ValidationServers.Passport.dll
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\ValidationServers.Passport.pdb
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\Google.Protobuf.dll
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\Grpc.AspNetCore.Server.dll
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\Grpc.AspNetCore.Server.ClientFactory.dll
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\Grpc.Core.Api.dll
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\Grpc.Net.Client.dll
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\Grpc.Net.ClientFactory.dll
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\Grpc.Net.Common.dll
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\RabbitMQ.Client.dll
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\Container.dll
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\Container.pdb
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\obj\Debug\net6.0\ValidationServers.Passport.csproj.AssemblyReference.cache
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\obj\Debug\net6.0\ValidationServers.Passport.GeneratedMSBuildEditorConfig.editorconfig
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\obj\Debug\net6.0\ValidationServers.Passport.AssemblyInfoInputs.cache
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\obj\Debug\net6.0\ValidationServers.Passport.AssemblyInfo.cs
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\obj\Debug\net6.0\ValidationServers.Passport.csproj.CoreCompileInputs.cache
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\obj\Debug\net6.0\ValidationServers.Passport.MvcApplicationPartsAssemblyInfo.cache
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\obj\Debug\net6.0\staticwebassets.build.json
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\obj\Debug\net6.0\staticwebassets.development.json
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\obj\Debug\net6.0\scopedcss\bundle\ValidationServers.Passport.styles.css
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\obj\Debug\net6.0\ValidationServers.Passport.csproj.CopyComplete
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\obj\Debug\net6.0\ValidationServers.Passport.dll
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\obj\Debug\net6.0\refint\ValidationServers.Passport.dll
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\obj\Debug\net6.0\ValidationServers.Passport.pdb
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\obj\Debug\net6.0\ValidationServers.Passport.genruntimeconfig.cache
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationServers.Passport\obj\Debug\net6.0\ref\ValidationServers.Passport.dll

@@ -10,3 +10,15 @@ C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationA
 C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Proto\obj\Debug\net6.0\ValidationApp.Proto.dll
 C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Proto\obj\Debug\net6.0\ref\ValidationApp.Proto.dll
 C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationApp.Proto\obj\Debug\net6.0\ValidationApp.Proto.pdb
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationApp.Proto\bin\Debug\net6.0\ValidationApp.Proto.deps.json
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationApp.Proto\bin\Debug\net6.0\ValidationApp.Proto.dll
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationApp.Proto\bin\Debug\net6.0\ValidationApp.Proto.pdb
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationApp.Proto\obj\Debug\net6.0\ValidationApp.Proto.csproj.AssemblyReference.cache
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationApp.Proto\obj\Debug\net6.0\ValidationApp.Proto.GeneratedMSBuildEditorConfig.editorconfig
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationApp.Proto\obj\Debug\net6.0\ValidationApp.Proto.AssemblyInfoInputs.cache
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationApp.Proto\obj\Debug\net6.0\ValidationApp.Proto.AssemblyInfo.cs
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationApp.Proto\obj\Debug\net6.0\ValidationApp.Proto.csproj.CoreCompileInputs.cache
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationApp.Proto\obj\Debug\net6.0\ValidationApp.Proto.dll
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationApp.Proto\obj\Debug\net6.0\refint\ValidationApp.Proto.dll
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationApp.Proto\obj\Debug\net6.0\ValidationApp.Proto.pdb
+D:\3 курс 6 семестр\ValidationApp\ValidationApp\ValidationApp.Proto\obj\Debug\net6.0\ref\ValidationApp.Proto.dll

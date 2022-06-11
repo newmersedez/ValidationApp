@@ -155,7 +155,7 @@ public class ValidationService : Validation.ValidationBase
         
         if(remove)
             for(int i=1; i<subs.Length; i++)
-                subs[i].Remove(0, 1);
+                subs[i] = subs[i].Remove(0, 1);
 
         return subs;
     }
@@ -335,6 +335,7 @@ public class ValidationService : Validation.ValidationBase
             {
                 result_reply.Result=false;
                 result_reply.Info="Validation time exceeded";
+                validation_reply.Result = result_reply;
                 return validation_reply;
             }
             await Task.Delay(1000);
@@ -342,7 +343,7 @@ public class ValidationService : Validation.ValidationBase
 
         result_reply.Result=_data_reply_address.Result.Result & _data_reply_date.Result.Result & _data_reply_email.Result.Result & _data_reply_passport.Result.Result & _data_reply_phone.Result.Result & _data_reply_fullname.Result.Result;
         result_reply.Info=_data_reply_address.Result.Info + _data_reply_date.Result.Info + _data_reply_email.Result.Info + _data_reply_passport.Result.Info + _data_reply_phone.Result.Info + _data_reply_fullname.Result.Info;
-
+        validation_reply.Result = result_reply;
         return validation_reply;
     }
 }

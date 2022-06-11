@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "rqFz7liOscK7uymxGFwCNYziYlIeWxiR7n5Q7qgIOes=",
+  "Hash": "6OzQDZMYPuxms53KqgpZtKPXj/NdeVhXsEZVdYlAT7M=",
   "Source": "ValidationApp.Server",
   "BasePath": "_content/ValidationApp.Server",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationServers.Address\\ValidationServers.Address.csproj",
+      "Identity": "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationServers.Address\\ValidationServers.Address.csproj",
       "Version": 2,
       "Source": "ValidationServers.Address",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
@@ -18,7 +18,7 @@
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
     },
     {
-      "Identity": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationServers.Date\\ValidationServers.Date.csproj",
+      "Identity": "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationServers.Date\\ValidationServers.Date.csproj",
       "Version": 2,
       "Source": "ValidationServers.Date",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
@@ -29,7 +29,7 @@
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
     },
     {
-      "Identity": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationServers.Email\\ValidationServers.Email.csproj",
+      "Identity": "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationServers.Email\\ValidationServers.Email.csproj",
       "Version": 2,
       "Source": "ValidationServers.Email",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
@@ -40,7 +40,7 @@
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
     },
     {
-      "Identity": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationServers.Fullname\\ValidationServers.Fullname.csproj",
+      "Identity": "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationServers.Fullname\\ValidationServers.Fullname.csproj",
       "Version": 2,
       "Source": "ValidationServers.Fullname",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
@@ -51,7 +51,7 @@
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
     },
     {
-      "Identity": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationServers.Passport\\ValidationServers.Passport.csproj",
+      "Identity": "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationServers.Passport\\ValidationServers.Passport.csproj",
       "Version": 2,
       "Source": "ValidationServers.Passport",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
@@ -62,7 +62,7 @@
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
     },
     {
-      "Identity": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\ValidationServers.Phone\\ValidationServers.Phone.csproj",
+      "Identity": "D:\\3 курс 6 семестр\\ValidationApp\\ValidationApp\\ValidationServers.Phone\\ValidationServers.Phone.csproj",
       "Version": 2,
       "Source": "ValidationServers.Phone",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",

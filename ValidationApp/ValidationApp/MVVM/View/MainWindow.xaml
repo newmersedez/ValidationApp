@@ -7,11 +7,11 @@
         xmlns:viewmodel="clr-namespace:ValidationApp.MVVM.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" 
-        Height="680" Width="800"
+        Height="700" Width="800"
         Background="#2F3136"
         WindowStyle="None"
         AllowsTransparency="True"
-        ResizeMode="CanResizeWithGrip"
+        ResizeMode="NoResize"
         BorderThickness="1"
         BorderBrush="Gray">
     
@@ -108,6 +108,7 @@
                 <TextBox 
                     Width="430"
                     Height="30"
+                    BorderBrush="{Binding FullnameBorderBrush, UpdateSourceTrigger=PropertyChanged}"
                     Style="{StaticResource InputFieldStyle}"
                     Text="{Binding Lastname, UpdateSourceTrigger=PropertyChanged}">
                     <TextBox.Resources>
@@ -126,6 +127,7 @@
                 <TextBox 
                     Width="430"
                     Height="30"
+                    BorderBrush="{Binding FullnameBorderBrush, UpdateSourceTrigger=PropertyChanged}"
                     Style="{StaticResource InputFieldStyle}"
                     Text="{Binding Firstname, UpdateSourceTrigger=PropertyChanged}">
                     <TextBox.Resources>
@@ -144,6 +146,7 @@
                 <TextBox 
                     Width="430"
                     Height="30"
+                    BorderBrush="{Binding FullnameBorderBrush, UpdateSourceTrigger=PropertyChanged}"
                     Style="{StaticResource InputFieldStyle}"
                     Text="{Binding Patronymic, UpdateSourceTrigger=PropertyChanged}">
                     <TextBox.Resources>
@@ -153,7 +156,7 @@
                     </TextBox.Resources>
                 </TextBox>
                 
-                <Label Content="Номер паспорта" 
+                <Label Content="Номер паспорта (XXXX XXXXXX)" 
                        VerticalAlignment="Center"
                        FontWeight="Medium"
                        Foreground="Gray"
@@ -162,6 +165,7 @@
                 <TextBox 
                     Width="430"
                     Height="30"
+                    BorderBrush="{Binding PassportBorderBrush, UpdateSourceTrigger=PropertyChanged}"
                     Style="{StaticResource InputFieldStyle}"
                     Text="{Binding PassportNumber, UpdateSourceTrigger=PropertyChanged}">
                     <TextBox.Resources>
@@ -171,7 +175,7 @@
                     </TextBox.Resources>
                 </TextBox>
                 
-                <Label Content="День рождения" 
+                <Label Content="День рождения (DD.MM.YYYY)" 
                        VerticalAlignment="Center"
                        FontWeight="Medium"
                        Foreground="Gray"
@@ -180,6 +184,7 @@
                 <TextBox 
                     Width="430"
                     Height="30"
+                    BorderBrush="{Binding BirthdayBorderBrush, UpdateSourceTrigger=PropertyChanged}"
                     Style="{StaticResource InputFieldStyle}"
                     Text="{Binding BirthdayDate, UpdateSourceTrigger=PropertyChanged}">
                     <TextBox.Resources>
@@ -189,7 +194,7 @@
                     </TextBox.Resources>
                 </TextBox>
                 
-                <Label Content="Номер телефона" 
+                <Label Content="Номер телефона (+7XXXXXXXXXX)"
                        VerticalAlignment="Center"
                        FontWeight="Medium"
                        Foreground="Gray"
@@ -200,6 +205,7 @@
                     MinHeight="30"
                     TextWrapping="Wrap"
                     AcceptsReturn="True"
+                    BorderBrush="{Binding PhoneBorderBrush, UpdateSourceTrigger=PropertyChanged}"
                     Style="{StaticResource InputFieldStyle}"
                     Text="{Binding PhoneNumber, UpdateSourceTrigger=PropertyChanged}">
                     <TextBox.Resources>
@@ -220,6 +226,7 @@
                     MinHeight="30"
                     TextWrapping="Wrap"
                     AcceptsReturn="True"
+                    BorderBrush="{Binding AddressBorderBrush, UpdateSourceTrigger=PropertyChanged}"
                     Style="{StaticResource InputFieldStyle}"
                     Text="{Binding Address, UpdateSourceTrigger=PropertyChanged}">
                     <TextBox.Resources>
@@ -240,6 +247,7 @@
                     MinHeight="30"
                     TextWrapping="Wrap"
                     AcceptsReturn="True"
+                    BorderBrush="{Binding EmailBorderBrush, UpdateSourceTrigger=PropertyChanged}"
                     Style="{StaticResource InputFieldStyle}"
                     Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}">
                     <TextBox.Resources>
