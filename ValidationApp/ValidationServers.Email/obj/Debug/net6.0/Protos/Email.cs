@@ -30,15 +30,15 @@ namespace ValidationServers.Email {
             "CzISLmVtYWlsLlJlc3VsdFJlcGx5EgoKAmlkGAIgASgEIjIKFlZhbGlkYXRp",
             "b25FbWFpbFJlcXVlc3QSCgoCaWQYASABKAQSDAoEZGF0YRgCIAEoCSI6ChRW",
             "YWxpZGF0aW9uRW1haWxSZXBseRIiCgZyZXN1bHQYASABKAsyEi5lbWFpbC5S",
-            "ZXN1bHRSZXBseSIsCgtEYXRhUmVxdWVzdBIKCgJpZBgBIAEoBBIRCgljb25u",
-            "ZWN0ZWQYAiABKAgiLwoJRGF0YVJlcGx5EiIKBnJlc3VsdBgBIAEoCzISLmVt",
-            "YWlsLlJlc3VsdFJlcGx5Mt8BCg9WYWxpZGF0aW9uRW1haWwSSAoMQXV0aGVu",
-            "dGljYXRlEhwuZW1haWwuQXV0aGVudGljYXRpb25SZXF1ZXN0GhouZW1haWwu",
-            "QXV0aGVudGljYXRpb25SZXBseRJLCg1WYWxpZGF0ZUVtYWlsEh0uZW1haWwu",
-            "VmFsaWRhdGlvbkVtYWlsUmVxdWVzdBobLmVtYWlsLlZhbGlkYXRpb25FbWFp",
-            "bFJlcGx5EjUKDUdldFNlcnZlckRhdGESEi5lbWFpbC5EYXRhUmVxdWVzdBoQ",
-            "LmVtYWlsLkRhdGFSZXBseUIaqgIXVmFsaWRhdGlvblNlcnZlcnMuRW1haWxi",
-            "BnByb3RvMw=="));
+            "ZXN1bHRSZXBseSI7CgtEYXRhUmVxdWVzdBIKCgJpZBgBIAEoBBIRCgljb25u",
+            "ZWN0ZWQYAiABKAgSDQoFY291bnQYAyABKA0iLwoJRGF0YVJlcGx5EiIKBnJl",
+            "c3VsdBgBIAEoCzISLmVtYWlsLlJlc3VsdFJlcGx5Mt8BCg9WYWxpZGF0aW9u",
+            "RW1haWwSSAoMQXV0aGVudGljYXRlEhwuZW1haWwuQXV0aGVudGljYXRpb25S",
+            "ZXF1ZXN0GhouZW1haWwuQXV0aGVudGljYXRpb25SZXBseRJLCg1WYWxpZGF0",
+            "ZUVtYWlsEh0uZW1haWwuVmFsaWRhdGlvbkVtYWlsUmVxdWVzdBobLmVtYWls",
+            "LlZhbGlkYXRpb25FbWFpbFJlcGx5EjUKDUdldFNlcnZlckRhdGESEi5lbWFp",
+            "bC5EYXRhUmVxdWVzdBoQLmVtYWlsLkRhdGFSZXBseUIaqgIXVmFsaWRhdGlv",
+            "blNlcnZlcnMuRW1haWxiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -47,7 +47,7 @@ namespace ValidationServers.Email {
             new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Email.AuthenticationReply), global::ValidationServers.Email.AuthenticationReply.Parser, new[]{ "Result", "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Email.ValidationEmailRequest), global::ValidationServers.Email.ValidationEmailRequest.Parser, new[]{ "Id", "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Email.ValidationEmailReply), global::ValidationServers.Email.ValidationEmailReply.Parser, new[]{ "Result" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Email.DataRequest), global::ValidationServers.Email.DataRequest.Parser, new[]{ "Id", "Connected" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Email.DataRequest), global::ValidationServers.Email.DataRequest.Parser, new[]{ "Id", "Connected", "Count" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Email.DataReply), global::ValidationServers.Email.DataReply.Parser, new[]{ "Result" }, null, null, null, null)
           }));
     }
@@ -1036,6 +1036,7 @@ namespace ValidationServers.Email {
     public DataRequest(DataRequest other) : this() {
       id_ = other.id_;
       connected_ = other.connected_;
+      count_ = other.count_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1066,6 +1067,17 @@ namespace ValidationServers.Email {
       }
     }
 
+    /// <summary>Field number for the "count" field.</summary>
+    public const int CountFieldNumber = 3;
+    private uint count_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint Count {
+      get { return count_; }
+      set {
+        count_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DataRequest);
@@ -1081,6 +1093,7 @@ namespace ValidationServers.Email {
       }
       if (Id != other.Id) return false;
       if (Connected != other.Connected) return false;
+      if (Count != other.Count) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1089,6 +1102,7 @@ namespace ValidationServers.Email {
       int hash = 1;
       if (Id != 0UL) hash ^= Id.GetHashCode();
       if (Connected != false) hash ^= Connected.GetHashCode();
+      if (Count != 0) hash ^= Count.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1113,6 +1127,10 @@ namespace ValidationServers.Email {
         output.WriteRawTag(16);
         output.WriteBool(Connected);
       }
+      if (Count != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Count);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1130,6 +1148,10 @@ namespace ValidationServers.Email {
         output.WriteRawTag(16);
         output.WriteBool(Connected);
       }
+      if (Count != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Count);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1144,6 +1166,9 @@ namespace ValidationServers.Email {
       }
       if (Connected != false) {
         size += 1 + 1;
+      }
+      if (Count != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Count);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1161,6 +1186,9 @@ namespace ValidationServers.Email {
       }
       if (other.Connected != false) {
         Connected = other.Connected;
+      }
+      if (other.Count != 0) {
+        Count = other.Count;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1184,6 +1212,10 @@ namespace ValidationServers.Email {
             Connected = input.ReadBool();
             break;
           }
+          case 24: {
+            Count = input.ReadUInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1204,6 +1236,10 @@ namespace ValidationServers.Email {
           }
           case 16: {
             Connected = input.ReadBool();
+            break;
+          }
+          case 24: {
+            Count = input.ReadUInt32();
             break;
           }
         }

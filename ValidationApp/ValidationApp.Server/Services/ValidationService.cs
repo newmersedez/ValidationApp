@@ -14,7 +14,12 @@ namespace ValidationApp.Server.Services;
 
 public class ValidationService : Validation.ValidationBase
 {
-    private readonly Channel _channel=new Channel("localhost", 5002, ChannelCredentials.Insecure);
+    private readonly Channel _channel_address=new Channel("localhost", 5002, ChannelCredentials.Insecure);
+    private readonly Channel _channel_date=new Channel("localhost", 5003, ChannelCredentials.Insecure);
+    private readonly Channel _channel_email=new Channel("localhost", 5004, ChannelCredentials.Insecure);
+    private readonly Channel _channel_fullname=new Channel("localhost", 5005, ChannelCredentials.Insecure);
+    private readonly Channel _channel_passport=new Channel("localhost", 5006, ChannelCredentials.Insecure);
+    private readonly Channel _channel_phone=new Channel("localhost", 5007, ChannelCredentials.Insecure);
     private readonly ValidationFullname.ValidationFullnameClient _client_validation_fullname;
     private readonly ValidationPhone.ValidationPhoneClient _client_validation_phone;
     private readonly ValidationEmail.ValidationEmailClient _client_validation_email;
@@ -35,11 +40,14 @@ public class ValidationService : Validation.ValidationBase
     private ValidationServers.Date.DataReply _data_reply_date=null;
     private ValidationServers.Date.DataRequest _data_request_date=new ValidationServers.Date.DataRequest() {Connected = true};
 
-    private ulong _id;
-    
     public ValidationService()
     {
-        _client_validation_fullname=new ValidationFullname.ValidationFullnameClient(_channel);
+        _client_validation_address=new ValidationAddress.ValidationAddressClient(_channel_address);
+        _client_validation_date=new ValidationDate.ValidationDateClient(_channel_date);
+        _client_validation_email=new ValidationEmail.ValidationEmailClient(_channel_email);
+        _client_validation_fullname=new ValidationFullname.ValidationFullnameClient(_channel_fullname);
+        _client_validation_passport=new ValidationPassport.ValidationPassportClient(_channel_passport);
+        _client_validation_phone=new ValidationPhone.ValidationPhoneClient(_channel_phone);
     }
     
     #region meh
@@ -202,7 +210,8 @@ public class ValidationService : Validation.ValidationBase
                                                      Record = components[0].Item2});
             foreach (var component in check_component_result.Item3)
                 tasks.Add(Task.Run(async () => await _client_validation_fullname.ValidateFullnameAsync(new ValidationFullnameRequest()
-                                                                                                                                        {Id=_id, Data=component})));
+                                                                                                                                        {Id=_data_request_fullname.Id, Data=component})));
+            _data_request_fullname.Count=(uint)check_component_result.Item3.Length;
             await Task.Run(() => getDataFromFullnameServer());
         }
         else
@@ -215,16 +224,17 @@ public class ValidationService : Validation.ValidationBase
         }
         _data_request_phone.Id=authentication_reply_phone.Id;
         
-        check_component_result=checkComponentCount(components, request.PhoneNumber, 1);
-        if(!check_component_result.Item2)
+        check_component_result=checkComponentCount(components, request.PhoneNumber, 1, 3);
+        if(check_component_result.Item2)
         {
             validation_reply.ValidationResult.Add(new ValidationResult()
-                                                  { Guid=ByteString.CopyFrom(components[0].Item1.ToByteArray()),
+                                                  { Guid=ByteString.CopyFrom(components[1].Item1.ToByteArray()),
                                                     Record = components[1].Item2});
             foreach (var component in check_component_result.Item3)
                 tasks.Add(Task.Run(async () => await _client_validation_phone.ValidatePhoneAsync(new ValidationPhoneRequest()
-                                                                                                                                        {Id=_id, Data=component})));
-            await Task.Run(() => getDataFromFullnameServer());
+                                                                                                                                        {Id=_data_request_phone.Id, Data=component})));
+            _data_request_phone.Count=(uint)check_component_result.Item3.Length;
+            await Task.Run(() => getDataFromPhoneServer());
         }
         else
             result_reply.Result=false;
@@ -236,15 +246,16 @@ public class ValidationService : Validation.ValidationBase
         }
         _data_request_email.Id=authentication_reply_email.Id;
         
-        check_component_result=checkComponentCount(components, request.Email, 1);
-        if(!check_component_result.Item2)
+        check_component_result=checkComponentCount(components, request.Email, 1, 3);
+        if(check_component_result.Item2)
         {
             validation_reply.ValidationResult.Add(new ValidationResult()
-                                                  { Guid=ByteString.CopyFrom(components[0].Item1.ToByteArray()),
-                                                    Record = components[1].Item2});
+                                                  { Guid=ByteString.CopyFrom(components[2].Item1.ToByteArray()),
+                                                    Record = components[2].Item2});
             foreach (var component in check_component_result.Item3)
                 tasks.Add(Task.Run(async () => await _client_validation_email.ValidateEmailAsync(new ValidationEmailRequest()
-                                                                                                       {Id=_id, Data=component})));
+                                                                                                       {Id=_data_request_email.Id, Data=component})));
+            _data_request_email.Count=(uint)check_component_result.Item3.Length;
             await Task.Run(() => getDataFromEmailServer());
         }
         else
@@ -257,15 +268,16 @@ public class ValidationService : Validation.ValidationBase
         }
         _data_request_address.Id=authentication_reply_address.Id;
         
-        check_component_result=checkComponentCount(components, request.Address, 1);
-        if(!check_component_result.Item2)
+        check_component_result=checkComponentCount(components, request.Address, 1, 2);
+        if(check_component_result.Item2)
         {
             validation_reply.ValidationResult.Add(new ValidationResult()
-                                                  { Guid=ByteString.CopyFrom(components[0].Item1.ToByteArray()),
-                                                    Record = components[1].Item2});
+                                                  { Guid=ByteString.CopyFrom(components[3].Item1.ToByteArray()),
+                                                    Record = components[3].Item2});
             foreach (var component in check_component_result.Item3)
                 tasks.Add(Task.Run(async () => await _client_validation_address.ValidateAddressAsync(new ValidationAddressRequest()
-                                                                                                       {Id=_id, Data=component})));
+                                                                                                       {Id=_data_request_address.Id, Data=component})));
+            _data_request_address.Count=(uint)check_component_result.Item3.Length;
             await Task.Run(() => getDataFromAddressServer());
         }
         else
@@ -279,14 +291,15 @@ public class ValidationService : Validation.ValidationBase
         _data_request_passport.Id=authentication_reply_passport.Id;
         
         check_component_result=checkComponentCount(components, request.PassportNumber, 1);
-        if(!check_component_result.Item2)
+        if(check_component_result.Item2)
         {
             validation_reply.ValidationResult.Add(new ValidationResult()
-                                                  { Guid=ByteString.CopyFrom(components[0].Item1.ToByteArray()),
-                                                    Record = components[1].Item2});
+                                                  { Guid=ByteString.CopyFrom(components[4].Item1.ToByteArray()),
+                                                    Record = components[4].Item2});
             foreach (var component in check_component_result.Item3)
                 tasks.Add(Task.Run(async () => await _client_validation_passport.ValidatePassportAsync(new ValidationPassportRequest()
-                                                                                                       {Id=_id, Data=component})));
+                                                                                                       {Id=_data_request_passport.Id, Data=component})));
+            _data_request_passport.Count=(uint)check_component_result.Item3.Length;
             await Task.Run(() => getDataFromPassportServer());
         }
         else
@@ -300,21 +313,21 @@ public class ValidationService : Validation.ValidationBase
         _data_request_date.Id=authentication_reply_date.Id;
         
         check_component_result=checkComponentCount(components, request.BirthDate, 1);
-        if(!check_component_result.Item2)
+        if(check_component_result.Item2)
         {
             validation_reply.ValidationResult.Add(new ValidationResult()
-                                                  { Guid=ByteString.CopyFrom(components[0].Item1.ToByteArray()),
-                                                    Record = components[1].Item2});
+                                                  { Guid=ByteString.CopyFrom(components[5].Item1.ToByteArray()),
+                                                    Record = components[5].Item2});
             foreach (var component in check_component_result.Item3)
                 tasks.Add(Task.Run(async () => await _client_validation_date.ValidateDateAsync(new ValidationDateRequest()
-                                                                                                       {Id=_id, Data=component})));
+                                                                                                       {Id=_data_request_date.Id, Data=component})));
+            _data_request_date.Count=(uint)check_component_result.Item3.Length;
             await Task.Run(() => getDataFromDateServer());
         }
         else
             result_reply.Result=false;
         
         Task.WaitAll(tasks.ToArray());
-
 
         for(int i=0; _data_reply_address==null || _data_reply_date==null || _data_reply_email==null || _data_reply_passport==null || _data_reply_phone==null || _data_reply_fullname==null; i++)
         {

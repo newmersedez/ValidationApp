@@ -1,0 +1,12 @@
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\Container\bin\Debug\net6.0\Container.deps.json
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\Container\bin\Debug\net6.0\Container.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\Container\bin\Debug\net6.0\ref\Container.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\Container\bin\Debug\net6.0\Container.pdb
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\Container\obj\Debug\net6.0\Container.csproj.AssemblyReference.cache
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\Container\obj\Debug\net6.0\Container.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\Container\obj\Debug\net6.0\Container.AssemblyInfoInputs.cache
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\Container\obj\Debug\net6.0\Container.AssemblyInfo.cs
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\Container\obj\Debug\net6.0\Container.csproj.CoreCompileInputs.cache
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\Container\obj\Debug\net6.0\Container.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\Container\obj\Debug\net6.0\ref\Container.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\Container\obj\Debug\net6.0\Container.pdb

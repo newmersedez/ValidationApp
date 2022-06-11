@@ -28,6 +28,7 @@ message ValidationPhoneReply {
 message DataRequest {
   uint64 id=1;
   bool connected=2;
+  uint32 count=3;
 }
 message DataReply {
   ResultReply result = 1;

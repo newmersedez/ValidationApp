@@ -260,6 +260,16 @@
         "runtime": {
           "lib/netcoreapp3.0/System.Threading.Channels.dll": {}
         }
+      },
+      "Container/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Container.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Container.dll": {}
+        }
       }
     }
   },
@@ -704,10 +714,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Container/1.0.0": {
+      "type": "project",
+      "path": "../Container/Container.csproj",
+      "msbuildProject": "../Container/Container.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Container >= 1.0.0",
       "Grpc.AspNetCore >= 2.40.0",
       "RabbitMQ.Client >= 6.3.1"
     ]
@@ -743,7 +759,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\Container\\Container.csproj": {
+              "projectPath": "C:\\Users\\Root\\Documents\\GitHub\\Labs\\RPKS\\ValidationApp\\ValidationApp\\Container\\Container.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

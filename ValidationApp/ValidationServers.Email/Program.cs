@@ -2,6 +2,7 @@ using ValidationServers.Email.Services;
 
 var builder=WebApplication.CreateBuilder(args);
 builder.Services.AddGrpc();
+builder.Services.AddSingleton(new ValidationEmailService());
 
 var app=builder.Build();
 app.MapGrpcService<ValidationEmailService>();

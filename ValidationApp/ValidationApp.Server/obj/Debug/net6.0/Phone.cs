@@ -30,14 +30,15 @@ namespace ValidationServers.Phone {
             "bmUuUmVzdWx0UmVwbHkSCgoCaWQYAiABKAQiMgoWVmFsaWRhdGlvblBob25l",
             "UmVxdWVzdBIKCgJpZBgBIAEoBBIMCgRkYXRhGAIgASgJIjoKFFZhbGlkYXRp",
             "b25QaG9uZVJlcGx5EiIKBnJlc3VsdBgBIAEoCzISLnBob25lLlJlc3VsdFJl",
-            "cGx5IiwKC0RhdGFSZXF1ZXN0EgoKAmlkGAEgASgEEhEKCWNvbm5lY3RlZBgC",
-            "IAEoCCIvCglEYXRhUmVwbHkSIgoGcmVzdWx0GAEgASgLMhIucGhvbmUuUmVz",
-            "dWx0UmVwbHky3wEKD1ZhbGlkYXRpb25QaG9uZRJICgxBdXRoZW50aWNhdGUS",
-            "HC5waG9uZS5BdXRoZW50aWNhdGlvblJlcXVlc3QaGi5waG9uZS5BdXRoZW50",
-            "aWNhdGlvblJlcGx5EksKDVZhbGlkYXRlUGhvbmUSHS5waG9uZS5WYWxpZGF0",
-            "aW9uUGhvbmVSZXF1ZXN0GhsucGhvbmUuVmFsaWRhdGlvblBob25lUmVwbHkS",
-            "NQoNR2V0U2VydmVyRGF0YRISLnBob25lLkRhdGFSZXF1ZXN0GhAucGhvbmUu",
-            "RGF0YVJlcGx5QhqqAhdWYWxpZGF0aW9uU2VydmVycy5QaG9uZWIGcHJvdG8z"));
+            "cGx5IjsKC0RhdGFSZXF1ZXN0EgoKAmlkGAEgASgEEhEKCWNvbm5lY3RlZBgC",
+            "IAEoCBINCgVjb3VudBgDIAEoDSIvCglEYXRhUmVwbHkSIgoGcmVzdWx0GAEg",
+            "ASgLMhIucGhvbmUuUmVzdWx0UmVwbHky3wEKD1ZhbGlkYXRpb25QaG9uZRJI",
+            "CgxBdXRoZW50aWNhdGUSHC5waG9uZS5BdXRoZW50aWNhdGlvblJlcXVlc3Qa",
+            "Gi5waG9uZS5BdXRoZW50aWNhdGlvblJlcGx5EksKDVZhbGlkYXRlUGhvbmUS",
+            "HS5waG9uZS5WYWxpZGF0aW9uUGhvbmVSZXF1ZXN0GhsucGhvbmUuVmFsaWRh",
+            "dGlvblBob25lUmVwbHkSNQoNR2V0U2VydmVyRGF0YRISLnBob25lLkRhdGFS",
+            "ZXF1ZXN0GhAucGhvbmUuRGF0YVJlcGx5QhqqAhdWYWxpZGF0aW9uU2VydmVy",
+            "cy5QaG9uZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -46,7 +47,7 @@ namespace ValidationServers.Phone {
             new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Phone.AuthenticationReply), global::ValidationServers.Phone.AuthenticationReply.Parser, new[]{ "Result", "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Phone.ValidationPhoneRequest), global::ValidationServers.Phone.ValidationPhoneRequest.Parser, new[]{ "Id", "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Phone.ValidationPhoneReply), global::ValidationServers.Phone.ValidationPhoneReply.Parser, new[]{ "Result" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Phone.DataRequest), global::ValidationServers.Phone.DataRequest.Parser, new[]{ "Id", "Connected" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Phone.DataRequest), global::ValidationServers.Phone.DataRequest.Parser, new[]{ "Id", "Connected", "Count" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Phone.DataReply), global::ValidationServers.Phone.DataReply.Parser, new[]{ "Result" }, null, null, null, null)
           }));
     }
@@ -1127,6 +1128,7 @@ namespace ValidationServers.Phone {
     public DataRequest(DataRequest other) : this() {
       id_ = other.id_;
       connected_ = other.connected_;
+      count_ = other.count_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1160,6 +1162,18 @@ namespace ValidationServers.Phone {
       }
     }
 
+    /// <summary>Field number for the "count" field.</summary>
+    public const int CountFieldNumber = 3;
+    private uint count_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Count {
+      get { return count_; }
+      set {
+        count_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1177,6 +1191,7 @@ namespace ValidationServers.Phone {
       }
       if (Id != other.Id) return false;
       if (Connected != other.Connected) return false;
+      if (Count != other.Count) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1186,6 +1201,7 @@ namespace ValidationServers.Phone {
       int hash = 1;
       if (Id != 0UL) hash ^= Id.GetHashCode();
       if (Connected != false) hash ^= Connected.GetHashCode();
+      if (Count != 0) hash ^= Count.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1212,6 +1228,10 @@ namespace ValidationServers.Phone {
         output.WriteRawTag(16);
         output.WriteBool(Connected);
       }
+      if (Count != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Count);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1230,6 +1250,10 @@ namespace ValidationServers.Phone {
         output.WriteRawTag(16);
         output.WriteBool(Connected);
       }
+      if (Count != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Count);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1245,6 +1269,9 @@ namespace ValidationServers.Phone {
       }
       if (Connected != false) {
         size += 1 + 1;
+      }
+      if (Count != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Count);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1263,6 +1290,9 @@ namespace ValidationServers.Phone {
       }
       if (other.Connected != false) {
         Connected = other.Connected;
+      }
+      if (other.Count != 0) {
+        Count = other.Count;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1287,6 +1317,10 @@ namespace ValidationServers.Phone {
             Connected = input.ReadBool();
             break;
           }
+          case 24: {
+            Count = input.ReadUInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1308,6 +1342,10 @@ namespace ValidationServers.Phone {
           }
           case 16: {
             Connected = input.ReadBool();
+            break;
+          }
+          case 24: {
+            Count = input.ReadUInt32();
             break;
           }
         }

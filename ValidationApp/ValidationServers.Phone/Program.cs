@@ -2,6 +2,7 @@ using ValidationServers.Phone.Services;
 
 var builder=WebApplication.CreateBuilder(args);
 builder.Services.AddGrpc();
+builder.Services.AddSingleton(new ValidationPhoneService());
 
 var app=builder.Build();
 app.MapGrpcService<ValidationPhoneService>();

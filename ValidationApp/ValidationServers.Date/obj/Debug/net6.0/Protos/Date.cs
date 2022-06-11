@@ -30,14 +30,15 @@ namespace ValidationServers.Date {
             "ES5kYXRlLlJlc3VsdFJlcGx5EgoKAmlkGAIgASgEIjEKFVZhbGlkYXRpb25E",
             "YXRlUmVxdWVzdBIKCgJpZBgBIAEoBBIMCgRkYXRhGAIgASgJIjgKE1ZhbGlk",
             "YXRpb25EYXRlUmVwbHkSIQoGcmVzdWx0GAEgASgLMhEuZGF0ZS5SZXN1bHRS",
-            "ZXBseSIsCgtEYXRhUmVxdWVzdBIKCgJpZBgBIAEoBBIRCgljb25uZWN0ZWQY",
-            "AiABKAgiLgoJRGF0YVJlcGx5EiEKBnJlc3VsdBgBIAEoCzIRLmRhdGUuUmVz",
-            "dWx0UmVwbHky1QEKDlZhbGlkYXRpb25EYXRlEkYKDEF1dGhlbnRpY2F0ZRIb",
-            "LmRhdGUuQXV0aGVudGljYXRpb25SZXF1ZXN0GhkuZGF0ZS5BdXRoZW50aWNh",
-            "dGlvblJlcGx5EkYKDFZhbGlkYXRlRGF0ZRIbLmRhdGUuVmFsaWRhdGlvbkRh",
-            "dGVSZXF1ZXN0GhkuZGF0ZS5WYWxpZGF0aW9uRGF0ZVJlcGx5EjMKDUdldFNl",
-            "cnZlckRhdGESES5kYXRlLkRhdGFSZXF1ZXN0Gg8uZGF0ZS5EYXRhUmVwbHlC",
-            "GaoCFlZhbGlkYXRpb25TZXJ2ZXJzLkRhdGViBnByb3RvMw=="));
+            "ZXBseSI7CgtEYXRhUmVxdWVzdBIKCgJpZBgBIAEoBBIRCgljb25uZWN0ZWQY",
+            "AiABKAgSDQoFY291bnQYAyABKA0iLgoJRGF0YVJlcGx5EiEKBnJlc3VsdBgB",
+            "IAEoCzIRLmRhdGUuUmVzdWx0UmVwbHky1QEKDlZhbGlkYXRpb25EYXRlEkYK",
+            "DEF1dGhlbnRpY2F0ZRIbLmRhdGUuQXV0aGVudGljYXRpb25SZXF1ZXN0Ghku",
+            "ZGF0ZS5BdXRoZW50aWNhdGlvblJlcGx5EkYKDFZhbGlkYXRlRGF0ZRIbLmRh",
+            "dGUuVmFsaWRhdGlvbkRhdGVSZXF1ZXN0GhkuZGF0ZS5WYWxpZGF0aW9uRGF0",
+            "ZVJlcGx5EjMKDUdldFNlcnZlckRhdGESES5kYXRlLkRhdGFSZXF1ZXN0Gg8u",
+            "ZGF0ZS5EYXRhUmVwbHlCGaoCFlZhbGlkYXRpb25TZXJ2ZXJzLkRhdGViBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -46,7 +47,7 @@ namespace ValidationServers.Date {
             new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Date.AuthenticationReply), global::ValidationServers.Date.AuthenticationReply.Parser, new[]{ "Result", "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Date.ValidationDateRequest), global::ValidationServers.Date.ValidationDateRequest.Parser, new[]{ "Id", "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Date.ValidationDateReply), global::ValidationServers.Date.ValidationDateReply.Parser, new[]{ "Result" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Date.DataRequest), global::ValidationServers.Date.DataRequest.Parser, new[]{ "Id", "Connected" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Date.DataRequest), global::ValidationServers.Date.DataRequest.Parser, new[]{ "Id", "Connected", "Count" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Date.DataReply), global::ValidationServers.Date.DataReply.Parser, new[]{ "Result" }, null, null, null, null)
           }));
     }
@@ -1035,6 +1036,7 @@ namespace ValidationServers.Date {
     public DataRequest(DataRequest other) : this() {
       id_ = other.id_;
       connected_ = other.connected_;
+      count_ = other.count_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1065,6 +1067,17 @@ namespace ValidationServers.Date {
       }
     }
 
+    /// <summary>Field number for the "count" field.</summary>
+    public const int CountFieldNumber = 3;
+    private uint count_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint Count {
+      get { return count_; }
+      set {
+        count_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DataRequest);
@@ -1080,6 +1093,7 @@ namespace ValidationServers.Date {
       }
       if (Id != other.Id) return false;
       if (Connected != other.Connected) return false;
+      if (Count != other.Count) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1088,6 +1102,7 @@ namespace ValidationServers.Date {
       int hash = 1;
       if (Id != 0UL) hash ^= Id.GetHashCode();
       if (Connected != false) hash ^= Connected.GetHashCode();
+      if (Count != 0) hash ^= Count.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1112,6 +1127,10 @@ namespace ValidationServers.Date {
         output.WriteRawTag(16);
         output.WriteBool(Connected);
       }
+      if (Count != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Count);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1129,6 +1148,10 @@ namespace ValidationServers.Date {
         output.WriteRawTag(16);
         output.WriteBool(Connected);
       }
+      if (Count != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Count);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1143,6 +1166,9 @@ namespace ValidationServers.Date {
       }
       if (Connected != false) {
         size += 1 + 1;
+      }
+      if (Count != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Count);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1160,6 +1186,9 @@ namespace ValidationServers.Date {
       }
       if (other.Connected != false) {
         Connected = other.Connected;
+      }
+      if (other.Count != 0) {
+        Count = other.Count;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1183,6 +1212,10 @@ namespace ValidationServers.Date {
             Connected = input.ReadBool();
             break;
           }
+          case 24: {
+            Count = input.ReadUInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1203,6 +1236,10 @@ namespace ValidationServers.Date {
           }
           case 16: {
             Connected = input.ReadBool();
+            break;
+          }
+          case 24: {
+            Count = input.ReadUInt32();
             break;
           }
         }

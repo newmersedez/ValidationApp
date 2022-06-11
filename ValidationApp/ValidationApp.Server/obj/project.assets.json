@@ -296,10 +296,21 @@
           "lib/netcoreapp3.0/System.Threading.Channels.dll": {}
         }
       },
+      "Container/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Container.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Container.dll": {}
+        }
+      },
       "ValidationServers.Address/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Container": "1.0.0",
           "Google.Protobuf": "3.21.1",
           "Grpc.AspNetCore": "2.40.0",
           "RabbitMQ.Client": "6.3.1"
@@ -318,6 +329,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Container": "1.0.0",
           "Grpc.AspNetCore": "2.40.0",
           "RabbitMQ.Client": "6.3.1"
         },
@@ -335,6 +347,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Container": "1.0.0",
           "Grpc.AspNetCore": "2.40.0",
           "RabbitMQ.Client": "6.3.1"
         },
@@ -352,6 +365,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Container": "1.0.0",
           "Grpc.AspNetCore": "2.40.0",
           "RabbitMQ.Client": "6.3.1"
         },
@@ -369,6 +383,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Container": "1.0.0",
           "Grpc.AspNetCore": "2.40.0",
           "RabbitMQ.Client": "6.3.1"
         },
@@ -386,6 +401,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Container": "1.0.0",
           "Grpc.AspNetCore": "2.40.0",
           "RabbitMQ.Client": "6.3.1"
         },
@@ -879,6 +895,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Container/1.0.0": {
+      "type": "project",
+      "path": "../Container/Container.csproj",
+      "msbuildProject": "../Container/Container.csproj"
     },
     "ValidationServers.Address/1.0.0": {
       "type": "project",

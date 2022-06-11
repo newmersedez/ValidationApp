@@ -205,8 +205,14 @@
       },
       "System.Memory/4.5.4": {},
       "System.Threading.Channels/4.7.1": {},
+      "Container/1.0.0": {
+        "runtime": {
+          "Container.dll": {}
+        }
+      },
       "ValidationServers.Address/1.0.0": {
         "dependencies": {
+          "Container": "1.0.0",
           "Google.Protobuf": "3.21.1",
           "Grpc.AspNetCore": "2.46.0",
           "RabbitMQ.Client": "6.3.1"
@@ -217,6 +223,7 @@
       },
       "ValidationServers.Date/1.0.0": {
         "dependencies": {
+          "Container": "1.0.0",
           "Grpc.AspNetCore": "2.46.0",
           "RabbitMQ.Client": "6.3.1"
         },
@@ -226,6 +233,7 @@
       },
       "ValidationServers.Email/1.0.0": {
         "dependencies": {
+          "Container": "1.0.0",
           "Grpc.AspNetCore": "2.46.0",
           "RabbitMQ.Client": "6.3.1"
         },
@@ -235,6 +243,7 @@
       },
       "ValidationServers.Fullname/1.0.0": {
         "dependencies": {
+          "Container": "1.0.0",
           "Grpc.AspNetCore": "2.46.0",
           "RabbitMQ.Client": "6.3.1"
         },
@@ -244,6 +253,7 @@
       },
       "ValidationServers.Passport/1.0.0": {
         "dependencies": {
+          "Container": "1.0.0",
           "Grpc.AspNetCore": "2.46.0",
           "RabbitMQ.Client": "6.3.1"
         },
@@ -253,6 +263,7 @@
       },
       "ValidationServers.Phone/1.0.0": {
         "dependencies": {
+          "Container": "1.0.0",
           "Grpc.AspNetCore": "2.46.0",
           "RabbitMQ.Client": "6.3.1"
         },
@@ -428,6 +439,11 @@
       "sha512": "sha512-6akRtHK/wab3246t4p5v3HQrtQk8LboOt5T4dtpNgsp3zvDeM4/Gx8V12t0h+c/W9/enUrilk8n6EQqdQorZAA==",
       "path": "system.threading.channels/4.7.1",
       "hashPath": "system.threading.channels.4.7.1.nupkg.sha512"
+    },
+    "Container/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "ValidationServers.Address/1.0.0": {
       "type": "project",

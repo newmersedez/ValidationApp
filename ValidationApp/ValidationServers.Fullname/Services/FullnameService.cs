@@ -1,8 +1,8 @@
 using System.Text;
 using Grpc.Core;
-using ValidationServers.Fullname;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using ValidationServers.Fullname.Context;
 
 namespace ValidationServers.Fullname.Services;
 
@@ -13,10 +13,12 @@ public class ValidationFullnameService : ValidationFullname.ValidationFullnameBa
     private ConnectionFactory _rabbit_factory;
     private IConnection _rabbit_connection;
     private IModel _rabbit_model;
+    private Container.Container container=new Container.Container();
     private EventingBasicConsumer _consumer;
     private Dictionary<ulong, List<ResultReply>> _validated_data=new Dictionary<ulong, List<ResultReply>>();
     public ValidationFullnameService()
     {
+        container.Register<IValidator, FullnameValidator>();
         _rabbit_factory=new ConnectionFactory() { HostName = "localhost" };
         _rabbit_connection=_rabbit_factory.CreateConnection();
         _rabbit_model=_rabbit_connection.CreateModel();
@@ -32,17 +34,19 @@ public class ValidationFullnameService : ValidationFullname.ValidationFullnameBa
 
             ulong id=BitConverter.ToUInt64(bytes_id);
             string data = Encoding.UTF8.GetString(bytes_data);
-            if(data=="Ya Ya Ya")
+            var validator=container.Create<IValidator>();
+            if(validator.Validate(data))
+            {
                 _validated_data[id].Add(new ResultReply()
                                         { Result=true,
-                                          Info="Ya valid" });
+                                          Info="Fullname true;" });
+            }
             else
             {
                 _validated_data[id].Add(new ResultReply()
                                         { Result=false,
-                                          Info="Ya not valid" });
+                                          Info="Fullname false;" });
             }
-            //_validated_data[id].Add(validate...)      TODO тут валидатор
         };
     }
 
@@ -53,7 +57,7 @@ public class ValidationFullnameService : ValidationFullname.ValidationFullnameBa
         return Task.FromResult(new AuthenticationReply()
                                { Result = new ResultReply()
                                  { Result = true,
-                                 Info = "dsa"
+                                 Info = "Connected."
                                   },
                                Id=_id_counter++ });
     }
@@ -64,7 +68,7 @@ public class ValidationFullnameService : ValidationFullname.ValidationFullnameBa
             _validated_data.Remove(request.Id);
             return Task.FromResult(new DataReply() {Result = new ResultReply() {Result = false, Info = "N/A"}});;
         }
-        if(_validated_data[request.Id].Count==1)
+        if(_validated_data[request.Id].Count==request.Count)
         {
             ResultReply result_reply=new ResultReply() {Result = true};
             foreach (var result in _validated_data[request.Id])

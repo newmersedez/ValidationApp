@@ -2,6 +2,7 @@ using ValidationServers.Address.Services;
 
 var builder=WebApplication.CreateBuilder(args);
 builder.Services.AddGrpc();
+builder.Services.AddSingleton(new ValidationAddressService());
 
 var app=builder.Build();
 app.MapGrpcService<ValidationAddressService>();

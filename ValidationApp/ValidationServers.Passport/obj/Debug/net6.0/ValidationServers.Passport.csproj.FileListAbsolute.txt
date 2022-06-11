@@ -28,3 +28,5 @@ C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationS
 C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationServers.Passport\obj\Debug\net6.0\ValidationServers.Passport.pdb
 C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationServers.Passport\obj\Debug\net6.0\ValidationServers.Passport.genruntimeconfig.cache
 C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\RabbitMQ.Client.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\Container.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationServers.Passport\bin\Debug\net6.0\Container.pdb

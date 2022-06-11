@@ -30,16 +30,16 @@ namespace ValidationServers.Fullname {
             "MhUuZnVsbG5hbWUuUmVzdWx0UmVwbHkSCgoCaWQYAiABKAQiNQoZVmFsaWRh",
             "dGlvbkZ1bGxuYW1lUmVxdWVzdBIKCgJpZBgBIAEoBBIMCgRkYXRhGAIgASgJ",
             "IkAKF1ZhbGlkYXRpb25GdWxsbmFtZVJlcGx5EiUKBnJlc3VsdBgBIAEoCzIV",
-            "LmZ1bGxuYW1lLlJlc3VsdFJlcGx5IiwKC0RhdGFSZXF1ZXN0EgoKAmlkGAEg",
-            "ASgEEhEKCWNvbm5lY3RlZBgCIAEoCCIyCglEYXRhUmVwbHkSJQoGcmVzdWx0",
-            "GAEgASgLMhUuZnVsbG5hbWUuUmVzdWx0UmVwbHky/QEKElZhbGlkYXRpb25G",
-            "dWxsbmFtZRJOCgxBdXRoZW50aWNhdGUSHy5mdWxsbmFtZS5BdXRoZW50aWNh",
-            "dGlvblJlcXVlc3QaHS5mdWxsbmFtZS5BdXRoZW50aWNhdGlvblJlcGx5EloK",
-            "EFZhbGlkYXRlRnVsbG5hbWUSIy5mdWxsbmFtZS5WYWxpZGF0aW9uRnVsbG5h",
-            "bWVSZXF1ZXN0GiEuZnVsbG5hbWUuVmFsaWRhdGlvbkZ1bGxuYW1lUmVwbHkS",
-            "OwoNR2V0U2VydmVyRGF0YRIVLmZ1bGxuYW1lLkRhdGFSZXF1ZXN0GhMuZnVs",
-            "bG5hbWUuRGF0YVJlcGx5Qh2qAhpWYWxpZGF0aW9uU2VydmVycy5GdWxsbmFt",
-            "ZWIGcHJvdG8z"));
+            "LmZ1bGxuYW1lLlJlc3VsdFJlcGx5IjsKC0RhdGFSZXF1ZXN0EgoKAmlkGAEg",
+            "ASgEEhEKCWNvbm5lY3RlZBgCIAEoCBINCgVjb3VudBgDIAEoDSIyCglEYXRh",
+            "UmVwbHkSJQoGcmVzdWx0GAEgASgLMhUuZnVsbG5hbWUuUmVzdWx0UmVwbHky",
+            "/QEKElZhbGlkYXRpb25GdWxsbmFtZRJOCgxBdXRoZW50aWNhdGUSHy5mdWxs",
+            "bmFtZS5BdXRoZW50aWNhdGlvblJlcXVlc3QaHS5mdWxsbmFtZS5BdXRoZW50",
+            "aWNhdGlvblJlcGx5EloKEFZhbGlkYXRlRnVsbG5hbWUSIy5mdWxsbmFtZS5W",
+            "YWxpZGF0aW9uRnVsbG5hbWVSZXF1ZXN0GiEuZnVsbG5hbWUuVmFsaWRhdGlv",
+            "bkZ1bGxuYW1lUmVwbHkSOwoNR2V0U2VydmVyRGF0YRIVLmZ1bGxuYW1lLkRh",
+            "dGFSZXF1ZXN0GhMuZnVsbG5hbWUuRGF0YVJlcGx5Qh2qAhpWYWxpZGF0aW9u",
+            "U2VydmVycy5GdWxsbmFtZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -48,7 +48,7 @@ namespace ValidationServers.Fullname {
             new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Fullname.AuthenticationReply), global::ValidationServers.Fullname.AuthenticationReply.Parser, new[]{ "Result", "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Fullname.ValidationFullnameRequest), global::ValidationServers.Fullname.ValidationFullnameRequest.Parser, new[]{ "Id", "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Fullname.ValidationFullnameReply), global::ValidationServers.Fullname.ValidationFullnameReply.Parser, new[]{ "Result" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Fullname.DataRequest), global::ValidationServers.Fullname.DataRequest.Parser, new[]{ "Id", "Connected" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Fullname.DataRequest), global::ValidationServers.Fullname.DataRequest.Parser, new[]{ "Id", "Connected", "Count" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Fullname.DataReply), global::ValidationServers.Fullname.DataReply.Parser, new[]{ "Result" }, null, null, null, null)
           }));
     }
@@ -1129,6 +1129,7 @@ namespace ValidationServers.Fullname {
     public DataRequest(DataRequest other) : this() {
       id_ = other.id_;
       connected_ = other.connected_;
+      count_ = other.count_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1162,6 +1163,18 @@ namespace ValidationServers.Fullname {
       }
     }
 
+    /// <summary>Field number for the "count" field.</summary>
+    public const int CountFieldNumber = 3;
+    private uint count_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Count {
+      get { return count_; }
+      set {
+        count_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1179,6 +1192,7 @@ namespace ValidationServers.Fullname {
       }
       if (Id != other.Id) return false;
       if (Connected != other.Connected) return false;
+      if (Count != other.Count) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1188,6 +1202,7 @@ namespace ValidationServers.Fullname {
       int hash = 1;
       if (Id != 0UL) hash ^= Id.GetHashCode();
       if (Connected != false) hash ^= Connected.GetHashCode();
+      if (Count != 0) hash ^= Count.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1214,6 +1229,10 @@ namespace ValidationServers.Fullname {
         output.WriteRawTag(16);
         output.WriteBool(Connected);
       }
+      if (Count != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Count);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1232,6 +1251,10 @@ namespace ValidationServers.Fullname {
         output.WriteRawTag(16);
         output.WriteBool(Connected);
       }
+      if (Count != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Count);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1247,6 +1270,9 @@ namespace ValidationServers.Fullname {
       }
       if (Connected != false) {
         size += 1 + 1;
+      }
+      if (Count != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Count);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1265,6 +1291,9 @@ namespace ValidationServers.Fullname {
       }
       if (other.Connected != false) {
         Connected = other.Connected;
+      }
+      if (other.Count != 0) {
+        Count = other.Count;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1289,6 +1318,10 @@ namespace ValidationServers.Fullname {
             Connected = input.ReadBool();
             break;
           }
+          case 24: {
+            Count = input.ReadUInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1310,6 +1343,10 @@ namespace ValidationServers.Fullname {
           }
           case 16: {
             Connected = input.ReadBool();
+            break;
+          }
+          case 24: {
+            Count = input.ReadUInt32();
             break;
           }
         }

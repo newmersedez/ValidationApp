@@ -28,3 +28,5 @@ C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationS
 C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationServers.Phone\obj\Debug\net6.0\ValidationServers.Phone.pdb
 C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationServers.Phone\obj\Debug\net6.0\ValidationServers.Phone.genruntimeconfig.cache
 C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationServers.Phone\bin\Debug\net6.0\RabbitMQ.Client.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationServers.Phone\bin\Debug\net6.0\Container.dll
+C:\Users\Root\Documents\GitHub\Labs\RPKS\ValidationApp\ValidationApp\ValidationServers.Phone\bin\Debug\net6.0\Container.pdb
