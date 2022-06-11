@@ -46,9 +46,25 @@ namespace ValidationServers.Email {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Email.AuthenticationRequest> __Marshaller_email_AuthenticationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Email.AuthenticationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Email.AuthenticationReply> __Marshaller_email_AuthenticationReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Email.AuthenticationReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ValidationServers.Email.ValidationEmailRequest> __Marshaller_email_ValidationEmailRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Email.ValidationEmailRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ValidationServers.Email.ValidationEmailReply> __Marshaller_email_ValidationEmailReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Email.ValidationEmailReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Email.DataRequest> __Marshaller_email_DataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Email.DataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Email.DataReply> __Marshaller_email_DataReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Email.DataReply.Parser));
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ValidationServers.Email.AuthenticationRequest, global::ValidationServers.Email.AuthenticationReply> __Method_Authenticate = new grpc::Method<global::ValidationServers.Email.AuthenticationRequest, global::ValidationServers.Email.AuthenticationReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Authenticate",
+        __Marshaller_email_AuthenticationRequest,
+        __Marshaller_email_AuthenticationReply);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::ValidationServers.Email.ValidationEmailRequest, global::ValidationServers.Email.ValidationEmailReply> __Method_ValidateEmail = new grpc::Method<global::ValidationServers.Email.ValidationEmailRequest, global::ValidationServers.Email.ValidationEmailReply>(
@@ -57,6 +73,14 @@ namespace ValidationServers.Email {
         "ValidateEmail",
         __Marshaller_email_ValidationEmailRequest,
         __Marshaller_email_ValidationEmailReply);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ValidationServers.Email.DataRequest, global::ValidationServers.Email.DataReply> __Method_GetServerData = new grpc::Method<global::ValidationServers.Email.DataRequest, global::ValidationServers.Email.DataReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetServerData",
+        __Marshaller_email_DataRequest,
+        __Marshaller_email_DataReply);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -92,6 +116,26 @@ namespace ValidationServers.Email {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::ValidationServers.Email.AuthenticationReply Authenticate(global::ValidationServers.Email.AuthenticationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return Authenticate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::ValidationServers.Email.AuthenticationReply Authenticate(global::ValidationServers.Email.AuthenticationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_Authenticate, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::ValidationServers.Email.AuthenticationReply> AuthenticateAsync(global::ValidationServers.Email.AuthenticationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AuthenticateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::ValidationServers.Email.AuthenticationReply> AuthenticateAsync(global::ValidationServers.Email.AuthenticationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_Authenticate, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::ValidationServers.Email.ValidationEmailReply ValidateEmail(global::ValidationServers.Email.ValidationEmailRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ValidateEmail(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -110,6 +154,26 @@ namespace ValidationServers.Email {
       public virtual grpc::AsyncUnaryCall<global::ValidationServers.Email.ValidationEmailReply> ValidateEmailAsync(global::ValidationServers.Email.ValidationEmailRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ValidateEmail, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::ValidationServers.Email.DataReply GetServerData(global::ValidationServers.Email.DataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetServerData(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::ValidationServers.Email.DataReply GetServerData(global::ValidationServers.Email.DataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetServerData, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::ValidationServers.Email.DataReply> GetServerDataAsync(global::ValidationServers.Email.DataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetServerDataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::ValidationServers.Email.DataReply> GetServerDataAsync(global::ValidationServers.Email.DataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetServerData, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

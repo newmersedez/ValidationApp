@@ -46,9 +46,25 @@ namespace ValidationServers.Address {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Address.AuthenticationRequest> __Marshaller_address_AuthenticationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Address.AuthenticationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Address.AuthenticationReply> __Marshaller_address_AuthenticationReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Address.AuthenticationReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ValidationServers.Address.ValidationAddressRequest> __Marshaller_address_ValidationAddressRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Address.ValidationAddressRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ValidationServers.Address.ValidationAddressReply> __Marshaller_address_ValidationAddressReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Address.ValidationAddressReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Address.DataRequest> __Marshaller_address_DataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Address.DataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Address.DataReply> __Marshaller_address_DataReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Address.DataReply.Parser));
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ValidationServers.Address.AuthenticationRequest, global::ValidationServers.Address.AuthenticationReply> __Method_Authenticate = new grpc::Method<global::ValidationServers.Address.AuthenticationRequest, global::ValidationServers.Address.AuthenticationReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Authenticate",
+        __Marshaller_address_AuthenticationRequest,
+        __Marshaller_address_AuthenticationReply);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::ValidationServers.Address.ValidationAddressRequest, global::ValidationServers.Address.ValidationAddressReply> __Method_ValidateAddress = new grpc::Method<global::ValidationServers.Address.ValidationAddressRequest, global::ValidationServers.Address.ValidationAddressReply>(
@@ -57,6 +73,14 @@ namespace ValidationServers.Address {
         "ValidateAddress",
         __Marshaller_address_ValidationAddressRequest,
         __Marshaller_address_ValidationAddressReply);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ValidationServers.Address.DataRequest, global::ValidationServers.Address.DataReply> __Method_GetServerData = new grpc::Method<global::ValidationServers.Address.DataRequest, global::ValidationServers.Address.DataReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetServerData",
+        __Marshaller_address_DataRequest,
+        __Marshaller_address_DataReply);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -92,6 +116,26 @@ namespace ValidationServers.Address {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::ValidationServers.Address.AuthenticationReply Authenticate(global::ValidationServers.Address.AuthenticationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return Authenticate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::ValidationServers.Address.AuthenticationReply Authenticate(global::ValidationServers.Address.AuthenticationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_Authenticate, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::ValidationServers.Address.AuthenticationReply> AuthenticateAsync(global::ValidationServers.Address.AuthenticationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AuthenticateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::ValidationServers.Address.AuthenticationReply> AuthenticateAsync(global::ValidationServers.Address.AuthenticationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_Authenticate, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::ValidationServers.Address.ValidationAddressReply ValidateAddress(global::ValidationServers.Address.ValidationAddressRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ValidateAddress(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -110,6 +154,26 @@ namespace ValidationServers.Address {
       public virtual grpc::AsyncUnaryCall<global::ValidationServers.Address.ValidationAddressReply> ValidateAddressAsync(global::ValidationServers.Address.ValidationAddressRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ValidateAddress, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::ValidationServers.Address.DataReply GetServerData(global::ValidationServers.Address.DataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetServerData(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::ValidationServers.Address.DataReply GetServerData(global::ValidationServers.Address.DataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetServerData, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::ValidationServers.Address.DataReply> GetServerDataAsync(global::ValidationServers.Address.DataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetServerDataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::ValidationServers.Address.DataReply> GetServerDataAsync(global::ValidationServers.Address.DataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetServerData, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

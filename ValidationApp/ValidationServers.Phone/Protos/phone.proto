@@ -9,13 +9,32 @@ message ResultReply {
   string info=2;
 }
 
+message AuthenticationRequest {
+
+}
+message AuthenticationReply {
+  ResultReply result = 1;
+  uint64 id=2;
+}
+
 message ValidationPhoneRequest {
-  string name = 1;
+  uint64 id=1;
+  string data=2;
 }
 message ValidationPhoneReply {
-  string message = 1;
+  ResultReply result = 1;
+}
+
+message DataRequest {
+  uint64 id=1;
+  bool connected=2;
+}
+message DataReply {
+  ResultReply result = 1;
 }
 
 service ValidationPhone {
+  rpc Authenticate(AuthenticationRequest) returns(AuthenticationReply);
   rpc ValidatePhone(ValidationPhoneRequest) returns(ValidationPhoneReply);
+  rpc GetServerData(DataRequest) returns(DataReply);
 }

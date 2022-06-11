@@ -46,9 +46,25 @@ namespace ValidationServers.Email {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Email.AuthenticationRequest> __Marshaller_email_AuthenticationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Email.AuthenticationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Email.AuthenticationReply> __Marshaller_email_AuthenticationReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Email.AuthenticationReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ValidationServers.Email.ValidationEmailRequest> __Marshaller_email_ValidationEmailRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Email.ValidationEmailRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ValidationServers.Email.ValidationEmailReply> __Marshaller_email_ValidationEmailReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Email.ValidationEmailReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Email.DataRequest> __Marshaller_email_DataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Email.DataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Email.DataReply> __Marshaller_email_DataReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Email.DataReply.Parser));
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ValidationServers.Email.AuthenticationRequest, global::ValidationServers.Email.AuthenticationReply> __Method_Authenticate = new grpc::Method<global::ValidationServers.Email.AuthenticationRequest, global::ValidationServers.Email.AuthenticationReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Authenticate",
+        __Marshaller_email_AuthenticationRequest,
+        __Marshaller_email_AuthenticationReply);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::ValidationServers.Email.ValidationEmailRequest, global::ValidationServers.Email.ValidationEmailReply> __Method_ValidateEmail = new grpc::Method<global::ValidationServers.Email.ValidationEmailRequest, global::ValidationServers.Email.ValidationEmailReply>(
@@ -57,6 +73,14 @@ namespace ValidationServers.Email {
         "ValidateEmail",
         __Marshaller_email_ValidationEmailRequest,
         __Marshaller_email_ValidationEmailReply);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ValidationServers.Email.DataRequest, global::ValidationServers.Email.DataReply> __Method_GetServerData = new grpc::Method<global::ValidationServers.Email.DataRequest, global::ValidationServers.Email.DataReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetServerData",
+        __Marshaller_email_DataRequest,
+        __Marshaller_email_DataReply);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -69,7 +93,19 @@ namespace ValidationServers.Email {
     public abstract partial class ValidationEmailBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::ValidationServers.Email.AuthenticationReply> Authenticate(global::ValidationServers.Email.AuthenticationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::ValidationServers.Email.ValidationEmailReply> ValidateEmail(global::ValidationServers.Email.ValidationEmailRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::ValidationServers.Email.DataReply> GetServerData(global::ValidationServers.Email.DataRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -82,7 +118,9 @@ namespace ValidationServers.Email {
     public static grpc::ServerServiceDefinition BindService(ValidationEmailBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_ValidateEmail, serviceImpl.ValidateEmail).Build();
+          .AddMethod(__Method_Authenticate, serviceImpl.Authenticate)
+          .AddMethod(__Method_ValidateEmail, serviceImpl.ValidateEmail)
+          .AddMethod(__Method_GetServerData, serviceImpl.GetServerData).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -92,7 +130,9 @@ namespace ValidationServers.Email {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ValidationEmailBase serviceImpl)
     {
+      serviceBinder.AddMethod(__Method_Authenticate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ValidationServers.Email.AuthenticationRequest, global::ValidationServers.Email.AuthenticationReply>(serviceImpl.Authenticate));
       serviceBinder.AddMethod(__Method_ValidateEmail, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ValidationServers.Email.ValidationEmailRequest, global::ValidationServers.Email.ValidationEmailReply>(serviceImpl.ValidateEmail));
+      serviceBinder.AddMethod(__Method_GetServerData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ValidationServers.Email.DataRequest, global::ValidationServers.Email.DataReply>(serviceImpl.GetServerData));
     }
 
   }

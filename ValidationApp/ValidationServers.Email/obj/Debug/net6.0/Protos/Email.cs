@@ -25,18 +25,30 @@ namespace ValidationServers.Email {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChJQcm90b3MvZW1haWwucHJvdG8SBWVtYWlsIisKC1Jlc3VsdFJlcGx5Eg4K",
-            "BnJlc3VsdBgBIAEoCBIMCgRpbmZvGAIgASgJIiYKFlZhbGlkYXRpb25FbWFp",
-            "bFJlcXVlc3QSDAoEbmFtZRgBIAEoCSInChRWYWxpZGF0aW9uRW1haWxSZXBs",
-            "eRIPCgdtZXNzYWdlGAEgASgJMl4KD1ZhbGlkYXRpb25FbWFpbBJLCg1WYWxp",
-            "ZGF0ZUVtYWlsEh0uZW1haWwuVmFsaWRhdGlvbkVtYWlsUmVxdWVzdBobLmVt",
-            "YWlsLlZhbGlkYXRpb25FbWFpbFJlcGx5QhqqAhdWYWxpZGF0aW9uU2VydmVy",
-            "cy5FbWFpbGIGcHJvdG8z"));
+            "BnJlc3VsdBgBIAEoCBIMCgRpbmZvGAIgASgJIhcKFUF1dGhlbnRpY2F0aW9u",
+            "UmVxdWVzdCJFChNBdXRoZW50aWNhdGlvblJlcGx5EiIKBnJlc3VsdBgBIAEo",
+            "CzISLmVtYWlsLlJlc3VsdFJlcGx5EgoKAmlkGAIgASgEIjIKFlZhbGlkYXRp",
+            "b25FbWFpbFJlcXVlc3QSCgoCaWQYASABKAQSDAoEZGF0YRgCIAEoCSI6ChRW",
+            "YWxpZGF0aW9uRW1haWxSZXBseRIiCgZyZXN1bHQYASABKAsyEi5lbWFpbC5S",
+            "ZXN1bHRSZXBseSIsCgtEYXRhUmVxdWVzdBIKCgJpZBgBIAEoBBIRCgljb25u",
+            "ZWN0ZWQYAiABKAgiLwoJRGF0YVJlcGx5EiIKBnJlc3VsdBgBIAEoCzISLmVt",
+            "YWlsLlJlc3VsdFJlcGx5Mt8BCg9WYWxpZGF0aW9uRW1haWwSSAoMQXV0aGVu",
+            "dGljYXRlEhwuZW1haWwuQXV0aGVudGljYXRpb25SZXF1ZXN0GhouZW1haWwu",
+            "QXV0aGVudGljYXRpb25SZXBseRJLCg1WYWxpZGF0ZUVtYWlsEh0uZW1haWwu",
+            "VmFsaWRhdGlvbkVtYWlsUmVxdWVzdBobLmVtYWlsLlZhbGlkYXRpb25FbWFp",
+            "bFJlcGx5EjUKDUdldFNlcnZlckRhdGESEi5lbWFpbC5EYXRhUmVxdWVzdBoQ",
+            "LmVtYWlsLkRhdGFSZXBseUIaqgIXVmFsaWRhdGlvblNlcnZlcnMuRW1haWxi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Email.ResultReply), global::ValidationServers.Email.ResultReply.Parser, new[]{ "Result", "Info" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Email.ValidationEmailRequest), global::ValidationServers.Email.ValidationEmailRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Email.ValidationEmailReply), global::ValidationServers.Email.ValidationEmailReply.Parser, new[]{ "Message" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Email.AuthenticationRequest), global::ValidationServers.Email.AuthenticationRequest.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Email.AuthenticationReply), global::ValidationServers.Email.AuthenticationReply.Parser, new[]{ "Result", "Id" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Email.ValidationEmailRequest), global::ValidationServers.Email.ValidationEmailRequest.Parser, new[]{ "Id", "Data" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Email.ValidationEmailReply), global::ValidationServers.Email.ValidationEmailReply.Parser, new[]{ "Result" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Email.DataRequest), global::ValidationServers.Email.DataRequest.Parser, new[]{ "Id", "Connected" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Email.DataReply), global::ValidationServers.Email.DataReply.Parser, new[]{ "Result" }, null, null, null, null)
           }));
     }
     #endregion
@@ -251,15 +263,15 @@ namespace ValidationServers.Email {
 
   }
 
-  public sealed partial class ValidationEmailRequest : pb::IMessage<ValidationEmailRequest>
+  public sealed partial class AuthenticationRequest : pb::IMessage<AuthenticationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<ValidationEmailRequest> _parser = new pb::MessageParser<ValidationEmailRequest>(() => new ValidationEmailRequest());
+    private static readonly pb::MessageParser<AuthenticationRequest> _parser = new pb::MessageParser<AuthenticationRequest>(() => new AuthenticationRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ValidationEmailRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<AuthenticationRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -272,55 +284,41 @@ namespace ValidationServers.Email {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ValidationEmailRequest() {
+    public AuthenticationRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ValidationEmailRequest(ValidationEmailRequest other) : this() {
-      name_ = other.name_;
+    public AuthenticationRequest(AuthenticationRequest other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ValidationEmailRequest Clone() {
-      return new ValidationEmailRequest(this);
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private string name_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
+    public AuthenticationRequest Clone() {
+      return new AuthenticationRequest(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as ValidationEmailRequest);
+      return Equals(other as AuthenticationRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ValidationEmailRequest other) {
+    public bool Equals(AuthenticationRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -337,9 +335,177 @@ namespace ValidationServers.Email {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Name.Length != 0) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AuthenticationRequest other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class AuthenticationReply : pb::IMessage<AuthenticationReply>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AuthenticationReply> _parser = new pb::MessageParser<AuthenticationReply>(() => new AuthenticationReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AuthenticationReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::ValidationServers.Email.EmailReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AuthenticationReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AuthenticationReply(AuthenticationReply other) : this() {
+      result_ = other.result_ != null ? other.result_.Clone() : null;
+      id_ = other.id_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AuthenticationReply Clone() {
+      return new AuthenticationReply(this);
+    }
+
+    /// <summary>Field number for the "result" field.</summary>
+    public const int ResultFieldNumber = 1;
+    private global::ValidationServers.Email.ResultReply result_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::ValidationServers.Email.ResultReply Result {
+      get { return result_; }
+      set {
+        result_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 2;
+    private ulong id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ulong Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AuthenticationReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AuthenticationReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Result, other.Result)) return false;
+      if (Id != other.Id) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (result_ != null) hash ^= Result.GetHashCode();
+      if (Id != 0UL) hash ^= Id.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (result_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(Name);
+        output.WriteMessage(Result);
+      }
+      if (Id != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(Id);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -350,9 +516,13 @@ namespace ValidationServers.Email {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Name.Length != 0) {
+      if (result_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(Name);
+        output.WriteMessage(Result);
+      }
+      if (Id != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(Id);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -363,8 +533,11 @@ namespace ValidationServers.Email {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      if (result_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Result);
+      }
+      if (Id != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Id);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -373,12 +546,18 @@ namespace ValidationServers.Email {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ValidationEmailRequest other) {
+    public void MergeFrom(AuthenticationReply other) {
       if (other == null) {
         return;
       }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
+      if (other.result_ != null) {
+        if (result_ == null) {
+          Result = new global::ValidationServers.Email.ResultReply();
+        }
+        Result.MergeFrom(other.Result);
+      }
+      if (other.Id != 0UL) {
+        Id = other.Id;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -395,7 +574,14 @@ namespace ValidationServers.Email {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Name = input.ReadString();
+            if (result_ == null) {
+              Result = new global::ValidationServers.Email.ResultReply();
+            }
+            input.ReadMessage(Result);
+            break;
+          }
+          case 16: {
+            Id = input.ReadUInt64();
             break;
           }
         }
@@ -413,7 +599,222 @@ namespace ValidationServers.Email {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            Name = input.ReadString();
+            if (result_ == null) {
+              Result = new global::ValidationServers.Email.ResultReply();
+            }
+            input.ReadMessage(Result);
+            break;
+          }
+          case 16: {
+            Id = input.ReadUInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ValidationEmailRequest : pb::IMessage<ValidationEmailRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ValidationEmailRequest> _parser = new pb::MessageParser<ValidationEmailRequest>(() => new ValidationEmailRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ValidationEmailRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::ValidationServers.Email.EmailReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ValidationEmailRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ValidationEmailRequest(ValidationEmailRequest other) : this() {
+      id_ = other.id_;
+      data_ = other.data_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ValidationEmailRequest Clone() {
+      return new ValidationEmailRequest(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private ulong id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ulong Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "data" field.</summary>
+    public const int DataFieldNumber = 2;
+    private string data_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Data {
+      get { return data_; }
+      set {
+        data_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ValidationEmailRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ValidationEmailRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (Data != other.Data) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id != 0UL) hash ^= Id.GetHashCode();
+      if (Data.Length != 0) hash ^= Data.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(Id);
+      }
+      if (Data.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Data);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(Id);
+      }
+      if (Data.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Data);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Id);
+      }
+      if (Data.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Data);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ValidationEmailRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id != 0UL) {
+        Id = other.Id;
+      }
+      if (other.Data.Length != 0) {
+        Data = other.Data;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Id = input.ReadUInt64();
+            break;
+          }
+          case 18: {
+            Data = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Id = input.ReadUInt64();
+            break;
+          }
+          case 18: {
+            Data = input.ReadString();
             break;
           }
         }
@@ -435,7 +836,7 @@ namespace ValidationServers.Email {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::ValidationServers.Email.EmailReflection.Descriptor.MessageTypes[2]; }
+      get { return global::ValidationServers.Email.EmailReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -452,7 +853,7 @@ namespace ValidationServers.Email {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ValidationEmailReply(ValidationEmailReply other) : this() {
-      message_ = other.message_;
+      result_ = other.result_ != null ? other.result_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -461,14 +862,14 @@ namespace ValidationServers.Email {
       return new ValidationEmailReply(this);
     }
 
-    /// <summary>Field number for the "message" field.</summary>
-    public const int MessageFieldNumber = 1;
-    private string message_ = "";
+    /// <summary>Field number for the "result" field.</summary>
+    public const int ResultFieldNumber = 1;
+    private global::ValidationServers.Email.ResultReply result_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Message {
-      get { return message_; }
+    public global::ValidationServers.Email.ResultReply Result {
+      get { return result_; }
       set {
-        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        result_ = value;
       }
     }
 
@@ -485,14 +886,14 @@ namespace ValidationServers.Email {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Message != other.Message) return false;
+      if (!object.Equals(Result, other.Result)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (result_ != null) hash ^= Result.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -509,9 +910,9 @@ namespace ValidationServers.Email {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Message.Length != 0) {
+      if (result_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(Message);
+        output.WriteMessage(Result);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -522,9 +923,9 @@ namespace ValidationServers.Email {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Message.Length != 0) {
+      if (result_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(Message);
+        output.WriteMessage(Result);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -535,8 +936,8 @@ namespace ValidationServers.Email {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Message.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      if (result_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Result);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -549,8 +950,11 @@ namespace ValidationServers.Email {
       if (other == null) {
         return;
       }
-      if (other.Message.Length != 0) {
-        Message = other.Message;
+      if (other.result_ != null) {
+        if (result_ == null) {
+          Result = new global::ValidationServers.Email.ResultReply();
+        }
+        Result.MergeFrom(other.Result);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -567,7 +971,10 @@ namespace ValidationServers.Email {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Message = input.ReadString();
+            if (result_ == null) {
+              Result = new global::ValidationServers.Email.ResultReply();
+            }
+            input.ReadMessage(Result);
             break;
           }
         }
@@ -585,7 +992,399 @@ namespace ValidationServers.Email {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            Message = input.ReadString();
+            if (result_ == null) {
+              Result = new global::ValidationServers.Email.ResultReply();
+            }
+            input.ReadMessage(Result);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class DataRequest : pb::IMessage<DataRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DataRequest> _parser = new pb::MessageParser<DataRequest>(() => new DataRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DataRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::ValidationServers.Email.EmailReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DataRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DataRequest(DataRequest other) : this() {
+      id_ = other.id_;
+      connected_ = other.connected_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DataRequest Clone() {
+      return new DataRequest(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private ulong id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ulong Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "connected" field.</summary>
+    public const int ConnectedFieldNumber = 2;
+    private bool connected_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Connected {
+      get { return connected_; }
+      set {
+        connected_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DataRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DataRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (Connected != other.Connected) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id != 0UL) hash ^= Id.GetHashCode();
+      if (Connected != false) hash ^= Connected.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(Id);
+      }
+      if (Connected != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Connected);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(Id);
+      }
+      if (Connected != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Connected);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Id);
+      }
+      if (Connected != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DataRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id != 0UL) {
+        Id = other.Id;
+      }
+      if (other.Connected != false) {
+        Connected = other.Connected;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Id = input.ReadUInt64();
+            break;
+          }
+          case 16: {
+            Connected = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Id = input.ReadUInt64();
+            break;
+          }
+          case 16: {
+            Connected = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class DataReply : pb::IMessage<DataReply>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DataReply> _parser = new pb::MessageParser<DataReply>(() => new DataReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DataReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::ValidationServers.Email.EmailReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DataReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DataReply(DataReply other) : this() {
+      result_ = other.result_ != null ? other.result_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DataReply Clone() {
+      return new DataReply(this);
+    }
+
+    /// <summary>Field number for the "result" field.</summary>
+    public const int ResultFieldNumber = 1;
+    private global::ValidationServers.Email.ResultReply result_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::ValidationServers.Email.ResultReply Result {
+      get { return result_; }
+      set {
+        result_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DataReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DataReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Result, other.Result)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (result_ != null) hash ^= Result.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (result_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Result);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (result_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Result);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (result_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Result);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DataReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.result_ != null) {
+        if (result_ == null) {
+          Result = new global::ValidationServers.Email.ResultReply();
+        }
+        Result.MergeFrom(other.Result);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (result_ == null) {
+              Result = new global::ValidationServers.Email.ResultReply();
+            }
+            input.ReadMessage(Result);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (result_ == null) {
+              Result = new global::ValidationServers.Email.ResultReply();
+            }
+            input.ReadMessage(Result);
             break;
           }
         }

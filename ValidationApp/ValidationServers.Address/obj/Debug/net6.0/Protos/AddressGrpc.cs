@@ -46,9 +46,25 @@ namespace ValidationServers.Address {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Address.AuthenticationRequest> __Marshaller_address_AuthenticationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Address.AuthenticationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Address.AuthenticationReply> __Marshaller_address_AuthenticationReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Address.AuthenticationReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ValidationServers.Address.ValidationAddressRequest> __Marshaller_address_ValidationAddressRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Address.ValidationAddressRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ValidationServers.Address.ValidationAddressReply> __Marshaller_address_ValidationAddressReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Address.ValidationAddressReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Address.DataRequest> __Marshaller_address_DataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Address.DataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Address.DataReply> __Marshaller_address_DataReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Address.DataReply.Parser));
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ValidationServers.Address.AuthenticationRequest, global::ValidationServers.Address.AuthenticationReply> __Method_Authenticate = new grpc::Method<global::ValidationServers.Address.AuthenticationRequest, global::ValidationServers.Address.AuthenticationReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Authenticate",
+        __Marshaller_address_AuthenticationRequest,
+        __Marshaller_address_AuthenticationReply);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::ValidationServers.Address.ValidationAddressRequest, global::ValidationServers.Address.ValidationAddressReply> __Method_ValidateAddress = new grpc::Method<global::ValidationServers.Address.ValidationAddressRequest, global::ValidationServers.Address.ValidationAddressReply>(
@@ -57,6 +73,14 @@ namespace ValidationServers.Address {
         "ValidateAddress",
         __Marshaller_address_ValidationAddressRequest,
         __Marshaller_address_ValidationAddressReply);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ValidationServers.Address.DataRequest, global::ValidationServers.Address.DataReply> __Method_GetServerData = new grpc::Method<global::ValidationServers.Address.DataRequest, global::ValidationServers.Address.DataReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetServerData",
+        __Marshaller_address_DataRequest,
+        __Marshaller_address_DataReply);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -69,7 +93,19 @@ namespace ValidationServers.Address {
     public abstract partial class ValidationAddressBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::ValidationServers.Address.AuthenticationReply> Authenticate(global::ValidationServers.Address.AuthenticationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::ValidationServers.Address.ValidationAddressReply> ValidateAddress(global::ValidationServers.Address.ValidationAddressRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::ValidationServers.Address.DataReply> GetServerData(global::ValidationServers.Address.DataRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -82,7 +118,9 @@ namespace ValidationServers.Address {
     public static grpc::ServerServiceDefinition BindService(ValidationAddressBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_ValidateAddress, serviceImpl.ValidateAddress).Build();
+          .AddMethod(__Method_Authenticate, serviceImpl.Authenticate)
+          .AddMethod(__Method_ValidateAddress, serviceImpl.ValidateAddress)
+          .AddMethod(__Method_GetServerData, serviceImpl.GetServerData).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -92,7 +130,9 @@ namespace ValidationServers.Address {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ValidationAddressBase serviceImpl)
     {
+      serviceBinder.AddMethod(__Method_Authenticate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ValidationServers.Address.AuthenticationRequest, global::ValidationServers.Address.AuthenticationReply>(serviceImpl.Authenticate));
       serviceBinder.AddMethod(__Method_ValidateAddress, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ValidationServers.Address.ValidationAddressRequest, global::ValidationServers.Address.ValidationAddressReply>(serviceImpl.ValidateAddress));
+      serviceBinder.AddMethod(__Method_GetServerData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ValidationServers.Address.DataRequest, global::ValidationServers.Address.DataReply>(serviceImpl.GetServerData));
     }
 
   }

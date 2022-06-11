@@ -26,7 +26,7 @@ namespace Proto {
           string.Concat(
             "CgpkYXRhLnByb3RvEgRkYXRhGgxjb21tb24ucHJvdG8iMAoQVmFsaWRhdGlv",
             "blJlc3VsdBIMCgRndWlkGAEgASgMEg4KBnJlY29yZBgCIAEoCSKJAQoRVmFs",
-            "aWRhdGlvblJlcXVlc3QSEQoJZnVsbF9uYW1lGAEgAygJEhQKDHBob25lX251",
+            "aWRhdGlvblJlcXVlc3QSEQoJZnVsbF9uYW1lGAEgASgJEhQKDHBob25lX251",
             "bWJlchgCIAEoCRINCgVlbWFpbBgDIAEoCRIPCgdhZGRyZXNzGAQgASgJEhcK",
             "D3Bhc3Nwb3J0X251bWJlchgFIAEoCRISCgpiaXJ0aF9kYXRlGAYgASgJImkK",
             "D1ZhbGlkYXRpb25SZXBseRIjCgZyZXN1bHQYASABKAsyEy5jb21tb24uUmVz",
@@ -306,7 +306,7 @@ namespace Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValidationRequest(ValidationRequest other) : this() {
-      fullName_ = other.fullName_.Clone();
+      fullName_ = other.fullName_;
       phoneNumber_ = other.phoneNumber_;
       email_ = other.email_;
       address_ = other.address_;
@@ -323,13 +323,14 @@ namespace Proto {
 
     /// <summary>Field number for the "full_name" field.</summary>
     public const int FullNameFieldNumber = 1;
-    private static readonly pb::FieldCodec<string> _repeated_fullName_codec
-        = pb::FieldCodec.ForString(10);
-    private readonly pbc::RepeatedField<string> fullName_ = new pbc::RepeatedField<string>();
+    private string fullName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> FullName {
+    public string FullName {
       get { return fullName_; }
+      set {
+        fullName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     /// <summary>Field number for the "phone_number" field.</summary>
@@ -407,7 +408,7 @@ namespace Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!fullName_.Equals(other.fullName_)) return false;
+      if (FullName != other.FullName) return false;
       if (PhoneNumber != other.PhoneNumber) return false;
       if (Email != other.Email) return false;
       if (Address != other.Address) return false;
@@ -420,7 +421,7 @@ namespace Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= fullName_.GetHashCode();
+      if (FullName.Length != 0) hash ^= FullName.GetHashCode();
       if (PhoneNumber.Length != 0) hash ^= PhoneNumber.GetHashCode();
       if (Email.Length != 0) hash ^= Email.GetHashCode();
       if (Address.Length != 0) hash ^= Address.GetHashCode();
@@ -444,7 +445,10 @@ namespace Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      fullName_.WriteTo(output, _repeated_fullName_codec);
+      if (FullName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FullName);
+      }
       if (PhoneNumber.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(PhoneNumber);
@@ -475,7 +479,10 @@ namespace Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      fullName_.WriteTo(ref output, _repeated_fullName_codec);
+      if (FullName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FullName);
+      }
       if (PhoneNumber.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(PhoneNumber);
@@ -506,7 +513,9 @@ namespace Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += fullName_.CalculateSize(_repeated_fullName_codec);
+      if (FullName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FullName);
+      }
       if (PhoneNumber.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PhoneNumber);
       }
@@ -534,7 +543,9 @@ namespace Proto {
       if (other == null) {
         return;
       }
-      fullName_.Add(other.fullName_);
+      if (other.FullName.Length != 0) {
+        FullName = other.FullName;
+      }
       if (other.PhoneNumber.Length != 0) {
         PhoneNumber = other.PhoneNumber;
       }
@@ -566,7 +577,7 @@ namespace Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            fullName_.AddEntriesFrom(input, _repeated_fullName_codec);
+            FullName = input.ReadString();
             break;
           }
           case 18: {
@@ -605,7 +616,7 @@ namespace Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            fullName_.AddEntriesFrom(ref input, _repeated_fullName_codec);
+            FullName = input.ReadString();
             break;
           }
           case 18: {

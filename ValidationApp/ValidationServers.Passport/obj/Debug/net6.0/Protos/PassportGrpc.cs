@@ -46,9 +46,25 @@ namespace ValidationServers.Passport {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Passport.AuthenticationRequest> __Marshaller_passport_AuthenticationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Passport.AuthenticationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Passport.AuthenticationReply> __Marshaller_passport_AuthenticationReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Passport.AuthenticationReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ValidationServers.Passport.ValidationPassportRequest> __Marshaller_passport_ValidationPassportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Passport.ValidationPassportRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ValidationServers.Passport.ValidationPassportReply> __Marshaller_passport_ValidationPassportReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Passport.ValidationPassportReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Passport.DataRequest> __Marshaller_passport_DataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Passport.DataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Passport.DataReply> __Marshaller_passport_DataReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Passport.DataReply.Parser));
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ValidationServers.Passport.AuthenticationRequest, global::ValidationServers.Passport.AuthenticationReply> __Method_Authenticate = new grpc::Method<global::ValidationServers.Passport.AuthenticationRequest, global::ValidationServers.Passport.AuthenticationReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Authenticate",
+        __Marshaller_passport_AuthenticationRequest,
+        __Marshaller_passport_AuthenticationReply);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::ValidationServers.Passport.ValidationPassportRequest, global::ValidationServers.Passport.ValidationPassportReply> __Method_ValidatePassport = new grpc::Method<global::ValidationServers.Passport.ValidationPassportRequest, global::ValidationServers.Passport.ValidationPassportReply>(
@@ -57,6 +73,14 @@ namespace ValidationServers.Passport {
         "ValidatePassport",
         __Marshaller_passport_ValidationPassportRequest,
         __Marshaller_passport_ValidationPassportReply);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ValidationServers.Passport.DataRequest, global::ValidationServers.Passport.DataReply> __Method_GetServerData = new grpc::Method<global::ValidationServers.Passport.DataRequest, global::ValidationServers.Passport.DataReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetServerData",
+        __Marshaller_passport_DataRequest,
+        __Marshaller_passport_DataReply);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -69,7 +93,19 @@ namespace ValidationServers.Passport {
     public abstract partial class ValidationPassportBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::ValidationServers.Passport.AuthenticationReply> Authenticate(global::ValidationServers.Passport.AuthenticationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::ValidationServers.Passport.ValidationPassportReply> ValidatePassport(global::ValidationServers.Passport.ValidationPassportRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::ValidationServers.Passport.DataReply> GetServerData(global::ValidationServers.Passport.DataRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -82,7 +118,9 @@ namespace ValidationServers.Passport {
     public static grpc::ServerServiceDefinition BindService(ValidationPassportBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_ValidatePassport, serviceImpl.ValidatePassport).Build();
+          .AddMethod(__Method_Authenticate, serviceImpl.Authenticate)
+          .AddMethod(__Method_ValidatePassport, serviceImpl.ValidatePassport)
+          .AddMethod(__Method_GetServerData, serviceImpl.GetServerData).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -92,7 +130,9 @@ namespace ValidationServers.Passport {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ValidationPassportBase serviceImpl)
     {
+      serviceBinder.AddMethod(__Method_Authenticate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ValidationServers.Passport.AuthenticationRequest, global::ValidationServers.Passport.AuthenticationReply>(serviceImpl.Authenticate));
       serviceBinder.AddMethod(__Method_ValidatePassport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ValidationServers.Passport.ValidationPassportRequest, global::ValidationServers.Passport.ValidationPassportReply>(serviceImpl.ValidatePassport));
+      serviceBinder.AddMethod(__Method_GetServerData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ValidationServers.Passport.DataRequest, global::ValidationServers.Passport.DataReply>(serviceImpl.GetServerData));
     }
 
   }

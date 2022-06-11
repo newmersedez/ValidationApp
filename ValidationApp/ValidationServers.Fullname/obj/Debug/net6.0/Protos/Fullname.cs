@@ -28,17 +28,18 @@ namespace ValidationServers.Fullname {
             "cGx5Eg4KBnJlc3VsdBgBIAEoCBIMCgRpbmZvGAIgASgJIhcKFUF1dGhlbnRp",
             "Y2F0aW9uUmVxdWVzdCJIChNBdXRoZW50aWNhdGlvblJlcGx5EiUKBnJlc3Vs",
             "dBgBIAEoCzIVLmZ1bGxuYW1lLlJlc3VsdFJlcGx5EgoKAmlkGAIgASgEIjUK",
-            "GVZhbGlkYXRpb25GdWxsbmFtZVJlcXVlc3QSCgoCaWQYAiABKAQSDAoEZGF0",
-            "YRgBIAEoCSJAChdWYWxpZGF0aW9uRnVsbG5hbWVSZXBseRIlCgZyZXN1bHQY",
-            "ASABKAsyFS5mdWxsbmFtZS5SZXN1bHRSZXBseSIZCgtEYXRhUmVxdWVzdBIK",
-            "CgJpZBgBIAEoBCIyCglEYXRhUmVwbHkSJQoGcmVzdWx0GAEgASgLMhUuZnVs",
-            "bG5hbWUuUmVzdWx0UmVwbHky/QEKElZhbGlkYXRpb25GdWxsbmFtZRJOCgxB",
-            "dXRoZW50aWNhdGUSHy5mdWxsbmFtZS5BdXRoZW50aWNhdGlvblJlcXVlc3Qa",
-            "HS5mdWxsbmFtZS5BdXRoZW50aWNhdGlvblJlcGx5EloKEFZhbGlkYXRlRnVs",
-            "bG5hbWUSIy5mdWxsbmFtZS5WYWxpZGF0aW9uRnVsbG5hbWVSZXF1ZXN0GiEu",
-            "ZnVsbG5hbWUuVmFsaWRhdGlvbkZ1bGxuYW1lUmVwbHkSOwoNR2V0U2VydmVy",
-            "RGF0YRIVLmZ1bGxuYW1lLkRhdGFSZXF1ZXN0GhMuZnVsbG5hbWUuRGF0YVJl",
-            "cGx5Qh2qAhpWYWxpZGF0aW9uU2VydmVycy5GdWxsbmFtZWIGcHJvdG8z"));
+            "GVZhbGlkYXRpb25GdWxsbmFtZVJlcXVlc3QSCgoCaWQYASABKAQSDAoEZGF0",
+            "YRgCIAEoCSJAChdWYWxpZGF0aW9uRnVsbG5hbWVSZXBseRIlCgZyZXN1bHQY",
+            "ASABKAsyFS5mdWxsbmFtZS5SZXN1bHRSZXBseSIsCgtEYXRhUmVxdWVzdBIK",
+            "CgJpZBgBIAEoBBIRCgljb25uZWN0ZWQYAiABKAgiMgoJRGF0YVJlcGx5EiUK",
+            "BnJlc3VsdBgBIAEoCzIVLmZ1bGxuYW1lLlJlc3VsdFJlcGx5Mv0BChJWYWxp",
+            "ZGF0aW9uRnVsbG5hbWUSTgoMQXV0aGVudGljYXRlEh8uZnVsbG5hbWUuQXV0",
+            "aGVudGljYXRpb25SZXF1ZXN0Gh0uZnVsbG5hbWUuQXV0aGVudGljYXRpb25S",
+            "ZXBseRJaChBWYWxpZGF0ZUZ1bGxuYW1lEiMuZnVsbG5hbWUuVmFsaWRhdGlv",
+            "bkZ1bGxuYW1lUmVxdWVzdBohLmZ1bGxuYW1lLlZhbGlkYXRpb25GdWxsbmFt",
+            "ZVJlcGx5EjsKDUdldFNlcnZlckRhdGESFS5mdWxsbmFtZS5EYXRhUmVxdWVz",
+            "dBoTLmZ1bGxuYW1lLkRhdGFSZXBseUIdqgIaVmFsaWRhdGlvblNlcnZlcnMu",
+            "RnVsbG5hbWViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -47,7 +48,7 @@ namespace ValidationServers.Fullname {
             new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Fullname.AuthenticationReply), global::ValidationServers.Fullname.AuthenticationReply.Parser, new[]{ "Result", "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Fullname.ValidationFullnameRequest), global::ValidationServers.Fullname.ValidationFullnameRequest.Parser, new[]{ "Id", "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Fullname.ValidationFullnameReply), global::ValidationServers.Fullname.ValidationFullnameReply.Parser, new[]{ "Result" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Fullname.DataRequest), global::ValidationServers.Fullname.DataRequest.Parser, new[]{ "Id" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Fullname.DataRequest), global::ValidationServers.Fullname.DataRequest.Parser, new[]{ "Id", "Connected" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ValidationServers.Fullname.DataReply), global::ValidationServers.Fullname.DataReply.Parser, new[]{ "Result" }, null, null, null, null)
           }));
     }
@@ -656,7 +657,7 @@ namespace ValidationServers.Fullname {
     }
 
     /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 2;
+    public const int IdFieldNumber = 1;
     private ulong id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ulong Id {
@@ -667,7 +668,7 @@ namespace ValidationServers.Fullname {
     }
 
     /// <summary>Field number for the "data" field.</summary>
-    public const int DataFieldNumber = 1;
+    public const int DataFieldNumber = 2;
     private string data_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Data {
@@ -716,13 +717,13 @@ namespace ValidationServers.Fullname {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Data.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Data);
-      }
       if (Id != 0UL) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteUInt64(Id);
+      }
+      if (Data.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Data);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -733,13 +734,13 @@ namespace ValidationServers.Fullname {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Data.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Data);
-      }
       if (Id != 0UL) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteUInt64(Id);
+      }
+      if (Data.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Data);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -787,12 +788,12 @@ namespace ValidationServers.Fullname {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            Data = input.ReadString();
+          case 8: {
+            Id = input.ReadUInt64();
             break;
           }
-          case 16: {
-            Id = input.ReadUInt64();
+          case 18: {
+            Data = input.ReadString();
             break;
           }
         }
@@ -809,12 +810,12 @@ namespace ValidationServers.Fullname {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            Data = input.ReadString();
+          case 8: {
+            Id = input.ReadUInt64();
             break;
           }
-          case 16: {
-            Id = input.ReadUInt64();
+          case 18: {
+            Data = input.ReadString();
             break;
           }
         }
@@ -1035,6 +1036,7 @@ namespace ValidationServers.Fullname {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DataRequest(DataRequest other) : this() {
       id_ = other.id_;
+      connected_ = other.connected_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1054,6 +1056,17 @@ namespace ValidationServers.Fullname {
       }
     }
 
+    /// <summary>Field number for the "connected" field.</summary>
+    public const int ConnectedFieldNumber = 2;
+    private bool connected_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Connected {
+      get { return connected_; }
+      set {
+        connected_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DataRequest);
@@ -1068,6 +1081,7 @@ namespace ValidationServers.Fullname {
         return true;
       }
       if (Id != other.Id) return false;
+      if (Connected != other.Connected) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1075,6 +1089,7 @@ namespace ValidationServers.Fullname {
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0UL) hash ^= Id.GetHashCode();
+      if (Connected != false) hash ^= Connected.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1095,6 +1110,10 @@ namespace ValidationServers.Fullname {
         output.WriteRawTag(8);
         output.WriteUInt64(Id);
       }
+      if (Connected != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Connected);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1108,6 +1127,10 @@ namespace ValidationServers.Fullname {
         output.WriteRawTag(8);
         output.WriteUInt64(Id);
       }
+      if (Connected != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Connected);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1119,6 +1142,9 @@ namespace ValidationServers.Fullname {
       int size = 0;
       if (Id != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Id);
+      }
+      if (Connected != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1133,6 +1159,9 @@ namespace ValidationServers.Fullname {
       }
       if (other.Id != 0UL) {
         Id = other.Id;
+      }
+      if (other.Connected != false) {
+        Connected = other.Connected;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1152,6 +1181,10 @@ namespace ValidationServers.Fullname {
             Id = input.ReadUInt64();
             break;
           }
+          case 16: {
+            Connected = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1168,6 +1201,10 @@ namespace ValidationServers.Fullname {
             break;
           case 8: {
             Id = input.ReadUInt64();
+            break;
+          }
+          case 16: {
+            Connected = input.ReadBool();
             break;
           }
         }

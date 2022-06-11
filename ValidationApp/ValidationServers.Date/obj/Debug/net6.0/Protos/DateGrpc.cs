@@ -46,9 +46,25 @@ namespace ValidationServers.Date {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Date.AuthenticationRequest> __Marshaller_date_AuthenticationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Date.AuthenticationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Date.AuthenticationReply> __Marshaller_date_AuthenticationReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Date.AuthenticationReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ValidationServers.Date.ValidationDateRequest> __Marshaller_date_ValidationDateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Date.ValidationDateRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ValidationServers.Date.ValidationDateReply> __Marshaller_date_ValidationDateReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Date.ValidationDateReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Date.DataRequest> __Marshaller_date_DataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Date.DataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Date.DataReply> __Marshaller_date_DataReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Date.DataReply.Parser));
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ValidationServers.Date.AuthenticationRequest, global::ValidationServers.Date.AuthenticationReply> __Method_Authenticate = new grpc::Method<global::ValidationServers.Date.AuthenticationRequest, global::ValidationServers.Date.AuthenticationReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Authenticate",
+        __Marshaller_date_AuthenticationRequest,
+        __Marshaller_date_AuthenticationReply);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::ValidationServers.Date.ValidationDateRequest, global::ValidationServers.Date.ValidationDateReply> __Method_ValidateDate = new grpc::Method<global::ValidationServers.Date.ValidationDateRequest, global::ValidationServers.Date.ValidationDateReply>(
@@ -57,6 +73,14 @@ namespace ValidationServers.Date {
         "ValidateDate",
         __Marshaller_date_ValidationDateRequest,
         __Marshaller_date_ValidationDateReply);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ValidationServers.Date.DataRequest, global::ValidationServers.Date.DataReply> __Method_GetServerData = new grpc::Method<global::ValidationServers.Date.DataRequest, global::ValidationServers.Date.DataReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetServerData",
+        __Marshaller_date_DataRequest,
+        __Marshaller_date_DataReply);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -69,7 +93,19 @@ namespace ValidationServers.Date {
     public abstract partial class ValidationDateBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::ValidationServers.Date.AuthenticationReply> Authenticate(global::ValidationServers.Date.AuthenticationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::ValidationServers.Date.ValidationDateReply> ValidateDate(global::ValidationServers.Date.ValidationDateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::ValidationServers.Date.DataReply> GetServerData(global::ValidationServers.Date.DataRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -82,7 +118,9 @@ namespace ValidationServers.Date {
     public static grpc::ServerServiceDefinition BindService(ValidationDateBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_ValidateDate, serviceImpl.ValidateDate).Build();
+          .AddMethod(__Method_Authenticate, serviceImpl.Authenticate)
+          .AddMethod(__Method_ValidateDate, serviceImpl.ValidateDate)
+          .AddMethod(__Method_GetServerData, serviceImpl.GetServerData).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -92,7 +130,9 @@ namespace ValidationServers.Date {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ValidationDateBase serviceImpl)
     {
+      serviceBinder.AddMethod(__Method_Authenticate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ValidationServers.Date.AuthenticationRequest, global::ValidationServers.Date.AuthenticationReply>(serviceImpl.Authenticate));
       serviceBinder.AddMethod(__Method_ValidateDate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ValidationServers.Date.ValidationDateRequest, global::ValidationServers.Date.ValidationDateReply>(serviceImpl.ValidateDate));
+      serviceBinder.AddMethod(__Method_GetServerData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ValidationServers.Date.DataRequest, global::ValidationServers.Date.DataReply>(serviceImpl.GetServerData));
     }
 
   }

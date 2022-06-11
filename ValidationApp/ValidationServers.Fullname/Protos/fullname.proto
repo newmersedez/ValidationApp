@@ -18,8 +18,8 @@ message AuthenticationReply {
 }
 
 message ValidationFullnameRequest {
-  uint64 id=2;
-  string data = 1;
+  uint64 id=1;
+  string data=2;
 }
 message ValidationFullnameReply {
   ResultReply result = 1;
@@ -27,6 +27,7 @@ message ValidationFullnameReply {
 
 message DataRequest {
   uint64 id=1;
+  bool connected=2;
 }
 message DataReply {
   ResultReply result = 1;

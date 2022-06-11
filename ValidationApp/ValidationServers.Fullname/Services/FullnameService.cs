@@ -14,8 +14,8 @@ public class ValidationFullnameService : ValidationFullname.ValidationFullnameBa
     private IConnection _rabbit_connection;
     private IModel _rabbit_model;
     private EventingBasicConsumer _consumer;
-    private Dictionary<ulong, List<ResultReply>> _validated_data;
-    public ValidationFullnameService(ILogger<ValidationFullnameService> logger)
+    private Dictionary<ulong, List<ResultReply>> _validated_data=new Dictionary<ulong, List<ResultReply>>();
+    public ValidationFullnameService()
     {
         _rabbit_factory=new ConnectionFactory() { HostName = "localhost" };
         _rabbit_connection=_rabbit_factory.CreateConnection();
@@ -32,15 +32,24 @@ public class ValidationFullnameService : ValidationFullname.ValidationFullnameBa
 
             ulong id=BitConverter.ToUInt64(bytes_id);
             string data = Encoding.UTF8.GetString(bytes_data);
-            
+            if(data=="Ya Ya Ya")
+                _validated_data[id].Add(new ResultReply()
+                                        { Result=true,
+                                          Info="Ya valid" });
+            else
+            {
+                _validated_data[id].Add(new ResultReply()
+                                        { Result=false,
+                                          Info="Ya not valid" });
+            }
             //_validated_data[id].Add(validate...)      TODO тут валидатор
         };
-        _logger=logger;
     }
 
     public override Task<AuthenticationReply> Authenticate(AuthenticationRequest request, ServerCallContext context)
     {
         _validated_data.Add(_id_counter, new List<ResultReply>());
+        
         return Task.FromResult(new AuthenticationReply()
                                { Result = new ResultReply()
                                  { Result = true,
@@ -50,7 +59,12 @@ public class ValidationFullnameService : ValidationFullname.ValidationFullnameBa
     }
     public override Task<DataReply> GetServerData(DataRequest request, ServerCallContext context)
     {
-        if(_validated_data[request.Id].Count==3)
+        if(request.Connected==false)
+        {
+            _validated_data.Remove(request.Id);
+            return Task.FromResult(new DataReply() {Result = new ResultReply() {Result = false, Info = "N/A"}});;
+        }
+        if(_validated_data[request.Id].Count==1)
         {
             ResultReply result_reply=new ResultReply() {Result = true};
             foreach (var result in _validated_data[request.Id])
@@ -61,7 +75,7 @@ public class ValidationFullnameService : ValidationFullname.ValidationFullnameBa
             }
             return Task.FromResult(new DataReply() {Result = result_reply});
         }
-        return null;
+        return Task.FromResult(new DataReply() {Result = new ResultReply() {Result = false, Info = "N/A"}});;
     }
     public override Task<ValidationFullnameReply> ValidateFullname(ValidationFullnameRequest request, ServerCallContext context)
     {

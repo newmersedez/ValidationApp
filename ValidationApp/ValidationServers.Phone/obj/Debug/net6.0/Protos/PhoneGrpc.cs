@@ -46,9 +46,25 @@ namespace ValidationServers.Phone {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Phone.AuthenticationRequest> __Marshaller_phone_AuthenticationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Phone.AuthenticationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Phone.AuthenticationReply> __Marshaller_phone_AuthenticationReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Phone.AuthenticationReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ValidationServers.Phone.ValidationPhoneRequest> __Marshaller_phone_ValidationPhoneRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Phone.ValidationPhoneRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ValidationServers.Phone.ValidationPhoneReply> __Marshaller_phone_ValidationPhoneReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Phone.ValidationPhoneReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Phone.DataRequest> __Marshaller_phone_DataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Phone.DataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ValidationServers.Phone.DataReply> __Marshaller_phone_DataReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ValidationServers.Phone.DataReply.Parser));
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ValidationServers.Phone.AuthenticationRequest, global::ValidationServers.Phone.AuthenticationReply> __Method_Authenticate = new grpc::Method<global::ValidationServers.Phone.AuthenticationRequest, global::ValidationServers.Phone.AuthenticationReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Authenticate",
+        __Marshaller_phone_AuthenticationRequest,
+        __Marshaller_phone_AuthenticationReply);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::ValidationServers.Phone.ValidationPhoneRequest, global::ValidationServers.Phone.ValidationPhoneReply> __Method_ValidatePhone = new grpc::Method<global::ValidationServers.Phone.ValidationPhoneRequest, global::ValidationServers.Phone.ValidationPhoneReply>(
@@ -57,6 +73,14 @@ namespace ValidationServers.Phone {
         "ValidatePhone",
         __Marshaller_phone_ValidationPhoneRequest,
         __Marshaller_phone_ValidationPhoneReply);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ValidationServers.Phone.DataRequest, global::ValidationServers.Phone.DataReply> __Method_GetServerData = new grpc::Method<global::ValidationServers.Phone.DataRequest, global::ValidationServers.Phone.DataReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetServerData",
+        __Marshaller_phone_DataRequest,
+        __Marshaller_phone_DataReply);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -69,7 +93,19 @@ namespace ValidationServers.Phone {
     public abstract partial class ValidationPhoneBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::ValidationServers.Phone.AuthenticationReply> Authenticate(global::ValidationServers.Phone.AuthenticationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::ValidationServers.Phone.ValidationPhoneReply> ValidatePhone(global::ValidationServers.Phone.ValidationPhoneRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::ValidationServers.Phone.DataReply> GetServerData(global::ValidationServers.Phone.DataRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -82,7 +118,9 @@ namespace ValidationServers.Phone {
     public static grpc::ServerServiceDefinition BindService(ValidationPhoneBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_ValidatePhone, serviceImpl.ValidatePhone).Build();
+          .AddMethod(__Method_Authenticate, serviceImpl.Authenticate)
+          .AddMethod(__Method_ValidatePhone, serviceImpl.ValidatePhone)
+          .AddMethod(__Method_GetServerData, serviceImpl.GetServerData).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -92,7 +130,9 @@ namespace ValidationServers.Phone {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ValidationPhoneBase serviceImpl)
     {
+      serviceBinder.AddMethod(__Method_Authenticate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ValidationServers.Phone.AuthenticationRequest, global::ValidationServers.Phone.AuthenticationReply>(serviceImpl.Authenticate));
       serviceBinder.AddMethod(__Method_ValidatePhone, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ValidationServers.Phone.ValidationPhoneRequest, global::ValidationServers.Phone.ValidationPhoneReply>(serviceImpl.ValidatePhone));
+      serviceBinder.AddMethod(__Method_GetServerData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ValidationServers.Phone.DataRequest, global::ValidationServers.Phone.DataReply>(serviceImpl.GetServerData));
     }
 
   }

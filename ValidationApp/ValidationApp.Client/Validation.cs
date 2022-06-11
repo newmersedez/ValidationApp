@@ -18,9 +18,7 @@ public sealed class ValidationClient
 
     public async Task<ValidationReply> validate(Contact contact)
     {
-        _validation_request.FullName.Add(contact.Firstname);
-        _validation_request.FullName.Add(contact.Lastname);
-        _validation_request.FullName.Add(contact.Patronymic);
+        _validation_request.FullName=contact.Firstname+" "+contact.Lastname+" "+contact.Patronymic;
         _validation_request.PhoneNumber=contact.PhoneNumber;
         _validation_request.Email=contact.Email;
         _validation_request.Address=contact.Address;
